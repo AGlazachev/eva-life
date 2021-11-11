@@ -2,6 +2,8 @@ const path = require('path');
 const { merge } = require('webpack-merge');
 const baseWebpackConfig = require('./webpack.base.conf');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const stylelint = require("stylelint");
+const StylelintPlugin = require('stylelint-webpack-plugin');
 
 const devWebpackConfig = merge(baseWebpackConfig, {
     mode: 'development',
@@ -19,6 +21,13 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         new HtmlWebpackPlugin({
             template: './src/twig/pages/index.twig'
         }),
+        new StylelintPlugin(
+            {
+                configFile: '../.stylelintrc',
+                files: '../src/sass/**/*.scss',
+                exclude: ['node-modules']
+            }
+        )
     ]
 });
 
