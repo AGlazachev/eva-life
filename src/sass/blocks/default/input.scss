@@ -1,0 +1,19 @@
+.input {
+    height: 44px;
+    padding: 14px 10px;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    font-size: var(--f-s-body);
+    color: var(--c-primary);
+    background-color: var(--c-bg);
+    transition: var(--transitions);
+    &::placeholder {
+
+    }
+    &:hover {
+
+    }
+    &:active, &:focus {
+
+    }
+}

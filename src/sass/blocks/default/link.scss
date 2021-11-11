@@ -1,0 +1,64 @@
+.link {
+    --linkActiveOpacity: 0.7;
+    position: relative;
+    color: var(--c-text);
+    transition: var(--transitions);
+    &:hover {
+        color: var(--c-primary);
+    }
+    &:active {
+        color: var(--c-primary);
+        opacity: 0.6;
+    }
+
+    &._visited:visited {
+        opacity: 0.7;
+    }
+
+    &._with-icon {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+
+        .icon {
+            width: 22px;
+            height: 22px;
+            margin-right: 8px;
+            fill: var(--c-text);
+        }
+
+        &:hover .icon {
+            fill: var(--c-primary-hover);
+        }
+    }
+
+    &._revert {
+        color: var(--c-primary);
+        &:hover {
+            color: var(--c-text);
+        }
+
+        &:hover .icon {
+            fill: var(--c-text);
+        }
+
+        &:active {
+            color: var(--c-text);
+            opacity: 0.6;
+        }
+
+        .icon {
+            fill: var(--c-primary-hover);
+        }
+    }
+
+    &._active {
+        opacity: var(--linkActiveOpacity);
+        cursor: default;
+        &:hover, &:active  {
+            color: inherit;
+            opacity: var(--linkActiveOpacity);
+        }
+    }
+}

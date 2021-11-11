@@ -1,0 +1,19 @@
+.h1{
+    margin-bottom: 8px;
+    font-size: var(--f-s-title);
+    font-weight: 700;
+    line-height: 1;
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 20px;
+    }
+}
+
+.h2 {
+    margin-bottom: 4px;
+    font-size: var(--f-s-h2);
+    font-weight: 700;
+    line-height: 1;
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 16px;
+    }
+}

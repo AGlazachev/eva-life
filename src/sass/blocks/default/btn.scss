@@ -1,0 +1,19 @@
+.btn {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    padding: 12px 28px;
+    border-radius: var(--border-radius);
+    font-family: var(--f-primary);
+    font-size: var(--f-s-h4);
+    line-height: 1;
+    text-align: center;
+    color: var(--c-white);
+    background-color: var(--c-primary);
+    transition: var(--transitions);
+    &:hover {
+        background-color: var(--c-primary-light);
+    }
+}
