@@ -4,7 +4,7 @@ $grid-breakpoints: (
         sm: 576px,
         md: 768px,
         lg: 992px,
-        xl: 1200px,
+        xl: 1300px,
         xxl: 1590px
 );
 
@@ -12,7 +12,7 @@ $container-max-widths: (
         sm: 540px,
         md: 720px,
         lg: 960px,
-        xl: 1140px,
+        xl: 1220px,
         xxl: 1560px
 );
 
@@ -20,7 +20,8 @@ $container-max-widths: (
 
 :root {
     //Шрифты
-    --f-primary: 'Lora', Arial, sans-serif;
+    --f-primary: 'HelveticaNeueCyr-Medium', Arial, sans-serif;
+    --f-secondary: 'Lora', Arial, sans-serif;
     --f-s-title: 52px;
     --f-s-h2: 32px;
     --f-s-h3: 18px;
@@ -30,6 +31,11 @@ $container-max-widths: (
         --f-s-h2: 40px;
         --f-s-h3: 20px;
         --f-s-body: 20px;
+    }
+    @include media-breakpoint-up(xl) {
+        --f-s-title: 100px;
+        --f-s-h2: 52px;
+        --f-s-h3: 28px;
     }
     @include media-breakpoint-up(xxl) {
         --f-s-title: 188px;
@@ -41,7 +47,7 @@ $container-max-widths: (
     --c-primary: rgb(246, 77, 118);
     --c-text: rgba(39, 39, 39, 1);
     --c-text-second: rgba(147, 147, 147, 1);
-    --c-lines: rgb(77, 106, 175);
+    --c-lines: rgba(39, 39, 39, 0.6);
     --c-bg: rgb(245, 245, 245);
     --c-white: rgb(255, 255, 255);
     --c-black: rgb(0, 0, 0);

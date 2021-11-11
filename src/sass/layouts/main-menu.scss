@@ -2,13 +2,23 @@
     &__list {
         display: grid;
         grid-auto-flow: column;
-        grid-gap: 20px;
+        grid-gap: 12px;
         justify-content: center;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            padding-right: 12px;
+            border-right: var(--border);
+        }
     }
 
     &__item-link {
         font-size: var(--f-s-body);
         text-align: center;
         color: var(--c-text);
+        &._active {
+            color: var(--c-primary);
+        }
     }
 }

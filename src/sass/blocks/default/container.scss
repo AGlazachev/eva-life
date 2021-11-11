@@ -5,31 +5,31 @@
     margin: 0 auto;
     @include media-breakpoint-up(xs) {
         max-width: get-breakpoints("xs");
-        padding: 0 28px;
+        padding: 0 16px;
     }
     @include media-breakpoint-up(sm) {
         max-width: get-breakpoints("sm");
-        padding: 0 28px;
+        padding: 0 16px;
     }
     @include media-breakpoint-up(md) {
         max-width: get-breakpoints("md");
-        padding: 0 28px;
+        padding: 0 16px;
     }
     @include media-breakpoint-up(lg) {
         max-width: get-breakpoints("lg");
-        padding: 0 28px;
+        padding: 0 16px;
     }
     @include media-breakpoint-up(xl) {
         max-width: get-breakpoints("xl");
-        padding: 0 28px;
+        padding: 0 16px;
     }
     @include media-breakpoint-up(exl) {
         width: 100% !important;
         max-width: get-breakpoints("exl") !important;
-        padding: 0 28px;
+        padding: 0 16px;
     }
     @include media-breakpoint-up(xxl) {
         max-width: get-breakpoints("xxl") !important;
-        padding: 0 28px;
+        padding: 0 16px;
     }
 }

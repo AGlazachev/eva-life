@@ -1,2 +1,3 @@
-//@include font-face(Raleway-SemiBold, 600);
-//@include font-face(Raleway-Regular);
+@import "mixins";
+
+@include font-face(HelveticaNeueCyr-Medium, 500);
