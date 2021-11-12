@@ -23,6 +23,10 @@ const devWebpackConfig = merge(baseWebpackConfig, {
             filename: 'index.html'
         }),
         new HtmlWebpackPlugin({
+            template: './src/twig/pages/catalog.twig',
+            filename: 'catalog.html'
+        }),
+        new HtmlWebpackPlugin({
             template: './src/twig/pages/contacts.twig',
             filename: 'contacts.html'
         }),

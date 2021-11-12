@@ -1,0 +1,32 @@
+{% extends '../layouts/base.twig' %}
+
+{% block title %}Каталог{% endblock %}
+{% block mainClass %}p-catalog section _with-women{% endblock %}
+
+{% set socialsItem = [
+    {
+        name: 'NEW',
+        status: 'active'
+    },
+    {
+        name: 'Футболки',
+    },
+    {
+        name: 'Свитшоты и худи',
+    },
+    {
+        name: 'Бомберы',
+    },
+    {
+        name: 'Чехлы',
+    },
+    {
+        name: 'Сумки',
+    },
+] %}
+
+{% block content %}
+    <div class="container-xl p-catalog__container">
+
+    </div>
+{% endblock %}
