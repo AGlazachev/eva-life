@@ -1,0 +1,30 @@
+.form-inner {
+    padding: 40px 40px;
+    background-color: var(--c-white);
+    @include media-breakpoint-up(xl) {
+        padding: 60px 20%;
+    }
+    @include media-breakpoint-up(xxl) {
+        padding: 60px 24%;
+    }
+    &._success {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__form-title {
+        font-family: var(--f-secondary);
+        font-style: italic;
+        font-size: var(--f-s-h3);
+        text-align: center;
+        line-height: 1.2;
+    }
+
+    &__form-desc {
+        margin-bottom: 20px;
+        font-size: var(--f-s-small);
+        text-align: center;
+    }
+}

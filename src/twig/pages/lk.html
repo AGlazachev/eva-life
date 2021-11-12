@@ -1,0 +1,22 @@
+{% extends '../layouts/base.twig' %}
+
+{% block title %}Авторизация{% endblock %}
+{% block bodyClass %}_bg{% endblock %}
+{% block mainClass %}p-auth section _with-women{% endblock %}
+
+{% block content %}
+<div class="container-xl p-lk__container">
+    <div class="form-inner">
+        <p class="form-inner__form-title">Войдите в ваш аккаунт</p>
+        <form action="/" class="form">
+            <div class="input">
+                <input class="input__text" type="email" placeholder="Ваш email" required>
+            </div>
+            <div class="input">
+                <input class="input__text" type="password" placeholder="Пароль" required>
+            </div>
+            <button class="btn _paper _big">Войти в аккаунт</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
