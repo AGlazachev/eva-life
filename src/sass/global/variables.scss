@@ -26,6 +26,7 @@ $container-max-widths: (
     --f-s-h2: 32px;
     --f-s-h3: 18px;
     --f-s-body: 16px;
+    --f-s-small: 14px;
     @include media-breakpoint-up(lg) {
         --f-s-title: 80px;
         --f-s-h2: 40px;
@@ -53,6 +54,7 @@ $container-max-widths: (
     --c-bg: rgb(245, 245, 245);
     --c-white: rgb(255, 255, 255);
     --c-black: rgb(0, 0, 0);
+    --c-error: red;
 
     //Дополнительно
     --mobileHeaderHeight: 92px;

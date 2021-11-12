@@ -19,7 +19,12 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/twig/pages/index.twig'
+            template: './src/twig/pages/index.twig',
+            filename: 'index.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/twig/pages/contacts.twig',
+            filename: 'contacts.html'
         }),
         new StylelintPlugin(
             {

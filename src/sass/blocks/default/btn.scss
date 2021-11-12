@@ -15,11 +15,8 @@
     transition: var(--transitions);
 
     &._big {
-        font-size: var(--f-s-h3);
-    }
-
-    &._with-icon {
         height: 40px;
+        font-size: var(--f-s-h3);
         @include media-breakpoint-up(xl) {
             height: 80px;
         }

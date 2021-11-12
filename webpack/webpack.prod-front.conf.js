@@ -12,6 +12,9 @@ const buildWebpackConfig = merge(baseWebpackConfig, {
         new HtmlWebpackPlugin({
             template: './src/twig/pages/index.twig'
         }),
+        new HtmlWebpackPlugin({
+            template: './src/twig/pages/contacts.twig'
+        }),
         new FileManagerPlugin({
             events: {
               onEnd: {

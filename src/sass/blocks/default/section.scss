@@ -1,10 +1,20 @@
 .margin-default {
+    margin-bottom: 24px;
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 40px;
+    }
+    @include media-breakpoint-up(xxl) {
+        margin-bottom: 44px;
+    }
+}
+
+.margin-big-second {
     margin-bottom: 28px;
     @include media-breakpoint-up(lg) {
         margin-bottom: 40px;
     }
     @include media-breakpoint-up(xxl) {
-        margin-bottom: 52px;
+        margin-bottom: 60px;
     }
 }
 
@@ -15,5 +25,14 @@
     }
     @include media-breakpoint-up(xxl) {
         margin-bottom: 80px;
+    }
+}
+
+.section {
+    padding-top: 28px;
+    padding-bottom: 40px;
+    @include media-breakpoint-up(xl) {
+        padding-top: 40px;
+        padding-bottom: 60px;
     }
 }

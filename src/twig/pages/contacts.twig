@@ -1,0 +1,50 @@
+{% extends '../layouts/base.twig' %}
+
+{% block title %}Контакты{% endblock %}
+{% block bodyClass %}_bg{% endblock %}
+{% block mainClass %}p-contacts section{% endblock %}
+
+{% block content %}
+    <div class="container-xl p-contacts__container">
+        <div class="p-contacts__inner">
+            <h1 class="h2 margin-big-second">Контакты</h1>
+            <div class="p-contacts__item margin-default">
+                <span class="p-contacts__item-desc">Позвонить нам</span>
+                <a class="p-contacts__item-link link" href="tel:+32903247324932">
+                    +32903247324932
+                </a>
+            </div>
+            <div class="p-contacts__item margin-default">
+                <span class="p-contacts__item-desc">Написать нам</span>
+                <a class="p-contacts__item-link link" href="tel:mail@gmail.com">
+                    mail@gmail.com
+                </a>
+            </div>
+            {% include '../components/socials.twig' %}
+        </div>
+        <div class="p-contacts__form-wrapper">
+            <p class="p-contacts__form-title">Есть вопросы?</p>
+            <p class="p-contacts__form-desc">
+                Заполните форму ниже и мы свяжемся с вами в ближайшем времени
+            </p>
+            <form action="/" class="form">
+                <div class="input">
+                    <input class="input__text" type="text" placeholder="Ваше имя" required>
+                </div>
+                <div class="input">
+                    <input class="input__text phone" type="tel" placeholder="Ваш номер телефона" required>
+                </div>
+                <div class="input">
+                    <input class="input__text" type="email" placeholder="Ваш email" required>
+                </div>
+                <button class="btn _paper _big">Отправить заявку</button>
+            </form>
+        </div>
+        <div class="p-contacts__form-wrapper hidden _success">
+            <p class="p-contacts__form-title">Заявка успешно отправлена</p>
+            <p class="p-contacts__form-desc">
+                Мы свяжемся с Вами в ближайшее время!
+            </p>
+        </div>
+    </div>
+{% endblock %}
