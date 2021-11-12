@@ -13,10 +13,12 @@
 <body class="body {% block bodyClass %}{% endblock %}">
 
 {% include 'header.twig' %}
+{% include 'mobile-side.twig' %}
 <main class="main {% block mainClass %}{% endblock %}">
     {% block content %}{% endblock %}
 </main>
 
 {% include 'footer.twig' %}
+<div class="overlay"></div>
 <div id="svg-icons"></div>
 </body>

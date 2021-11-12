@@ -1,0 +1,38 @@
+.socials {
+    --socialIconSize: 40px;
+    --socialIconFill: var(--c-white);
+    --socialIconFillHover: var(--c-primary);
+    width: fit-content;
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+        align-items: center;
+        @include media-breakpoint-up(sm) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    &__item {
+        &:hover .icon {
+            fill: var(--socialIconFillHover);
+        }
+    }
+
+    &__item-link {
+        display: grid;
+        grid-template-columns: var(--socialIconSize) 1fr;
+        grid-gap: 16px;
+        align-items: center;
+    }
+
+    .icon {
+        width: var(--socialIconSize);
+        height: var(--socialIconSize);
+        padding: 8px;
+        border-radius: var(--border-radius);
+        background-color: var(--c-text);
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
+        fill: var(--socialIconFill);
+    }
+}

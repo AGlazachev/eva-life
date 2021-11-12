@@ -1,0 +1,19 @@
+.margin-default {
+    margin-bottom: 28px;
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 40px;
+    }
+    @include media-breakpoint-up(xxl) {
+        margin-bottom: 52px;
+    }
+}
+
+.margin-big {
+    margin-bottom: 40px;
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 60px;
+    }
+    @include media-breakpoint-up(xxl) {
+        margin-bottom: 80px;
+    }
+}

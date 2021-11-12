@@ -1,9 +1,23 @@
 .body {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
     font-family: var(--f-primary);
     font-size: var(--f-s-body);
     line-height: 1.5;
     color: var(--c-text);
-    &._index {
+    &._bg {
         background: linear-gradient(180deg, #A7FAFF 0%, #F77CAD 76.25%), linear-gradient(180deg, #FFF6A7 0%, #F77CAD 76.25%);
+    }
+
+    &._fixed {
+        @include media-breakpoint-up(lg) {
+            height: 100vh;
+            overflow: hidden;
+        }
+    }
+
+    &._no-scroll {
+        overflow-y: hidden;
     }
 }

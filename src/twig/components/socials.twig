@@ -1,0 +1,39 @@
+{% set socialsItem = [
+    {
+        name: 'Eva Elfie',
+        icon: 'youtube'
+    },
+    {
+        name: 'TheEvaElfie',
+        icon: 'instagram'
+    },
+    {
+        name: 'TheEvaElfie',
+        icon: 'tik-tok'
+    },
+    {
+        name: 'Eva Elfie',
+        icon: 'lock'
+    },
+    {
+        name: 'EvaElfie_Life',
+        icon: 'telegram'
+    },
+    {
+        name: 'EvaElfie',
+        icon: 'twitter'
+    },
+] %}
+
+<section class="socials">
+    <ul class="socials__list">
+        {% for item in socialsItem %}
+            <li class="socials__item">
+                <a class="socials__item-link link" href="{{ item.link }}" target="_blank">
+                    <svg class="icon"><use href="#{{ item.icon }}"></use></svg>
+                    <span class="socials__item-text">{{ item.name }}</span>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</section>

@@ -1,19 +1,43 @@
 .btn {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    height: 60px;
+    height: 40px;
     padding: 12px 28px;
     border-radius: var(--border-radius);
     font-family: var(--f-primary);
     font-size: var(--f-s-h4);
     line-height: 1;
     text-align: center;
-    color: var(--c-white);
+    color: var(--c-text);
     background-color: var(--c-primary);
     transition: var(--transitions);
-    &:hover {
-        background-color: var(--c-primary-light);
+
+    &._big {
+        font-size: var(--f-s-h3);
+    }
+
+    &._with-icon {
+        height: 40px;
+        @include media-breakpoint-up(xl) {
+            height: 80px;
+        }
+        @include media-breakpoint-up(xxl) {
+            min-width: 312px;
+            height: 100px;
+        }
+    }
+
+    &._paper {
+        flex-flow: row nowrap;
+        background: var(--c-secondary) url('/assets/img/custom/paper.png');
+        &:hover {
+            background: var(--c-white) url('/assets/img/custom/paper.png');
+        }
+
+        .icon {
+            margin-right: 20px;
+        }
     }
 }

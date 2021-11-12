@@ -1,13 +1,31 @@
 {% extends '../layouts/base.twig' %}
 
 {% block title %}Главная{% endblock %}
-{% block bodyClass %}_index{% endblock %}
+{% block bodyClass %}_bg _fixed{% endblock %}
 {% block mainClass %}p-index{% endblock %}
 
 {% block content %}
-    <div class="container">
+    <div class="container-xl p-index__container">
         <div class="p-index__inner">
-            <h1 class="h1">Eva Elfie</h1>
+            <h1 class="h1 margin-big">Eva Elfie</h1>
+            {% include '../components/socials.twig' %}
+            <div class="p-index__btn-inner">
+                <a href="/catalog.html" class="btn _paper _big _with-icon">
+                    <svg class="icon">
+                        <use xlink:href="#dress"></use>
+                    </svg>
+                    <span>Мерч</span>
+                </a>
+                <a href="/catalog.html" class="btn _paper _big _with-icon">
+                    <svg class="icon">
+                        <use xlink:href="#bubble"></use>
+                    </svg>
+                    <span>Комикс</span>
+                </a>
+            </div>
+        </div>
+        <div class="p-index__wrapper">
+            <img class="p-index__img" src="/assets/img/custom/main-girl.png" alt="">
         </div>
     </div>
 {% endblock %}

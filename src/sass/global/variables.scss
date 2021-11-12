@@ -27,24 +27,26 @@ $container-max-widths: (
     --f-s-h3: 18px;
     --f-s-body: 16px;
     @include media-breakpoint-up(lg) {
-        --f-s-title: 60px;
+        --f-s-title: 80px;
         --f-s-h2: 40px;
         --f-s-h3: 20px;
-        --f-s-body: 20px;
+        --f-s-body: 18px;
     }
     @include media-breakpoint-up(xl) {
         --f-s-title: 100px;
         --f-s-h2: 52px;
         --f-s-h3: 28px;
+        --f-s-body: 20px;
     }
     @include media-breakpoint-up(xxl) {
-        --f-s-title: 188px;
+        --f-s-title: 180px;
         --f-s-h2: 72px;
         --f-s-h3: 36px;
     }
 
     //Цвета
     --c-primary: rgb(246, 77, 118);
+    --c-secondary: rgb(112, 242, 234);
     --c-text: rgba(39, 39, 39, 1);
     --c-text-second: rgba(147, 147, 147, 1);
     --c-lines: rgba(39, 39, 39, 0.6);
@@ -53,7 +55,8 @@ $container-max-widths: (
     --c-black: rgb(0, 0, 0);
 
     //Дополнительно
+    --mobileHeaderHeight: 92px;
     --border: 1px solid var(--c-lines);
-    --border-radius: 4px;
+    --border-radius: 8px;
     --transitions: all 0.4s ease;
 }

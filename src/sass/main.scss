@@ -11,14 +11,19 @@
 @import "blocks/default/text";
 @import "blocks/default/input";
 @import "blocks/default/btn";
+@import "blocks/default/mobile-btn";
 @import "blocks/default/link";
 @import "blocks/default/logo";
 @import "blocks/default/overlay";
 @import "blocks/default/container";
+@import "blocks/default/section";
 
 @import "layouts/body";
 @import "layouts/header";
 @import "layouts/footer";
 @import "layouts/main-menu";
+@import "layouts/mobile-side";
+
+@import "blocks/socials";
 
 @import "pages/p-index";

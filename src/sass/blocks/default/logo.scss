@@ -1,9 +1,14 @@
 .logo {
-    max-width: 100px;
-    height: 100px;
+    max-width: 60px;
+    height: 60px;
     transition: var(--transition);
     &:hover {
         opacity: 0.8;
+    }
+
+    @include media-breakpoint-up(lg) {
+        max-width: 100px;
+        height: 100px;
     }
 
     &__img {
