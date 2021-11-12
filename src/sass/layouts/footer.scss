@@ -2,9 +2,6 @@
     padding: 28px 0;
     color: var(--c-white);
     background: var(--c-text) url("/assets/img/custom/bg.png");
-    @include media-breakpoint-up(lg) {
-        padding: 44px 0;
-    }
 
     &__container {
         display: grid;

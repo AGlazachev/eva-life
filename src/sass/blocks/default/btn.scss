@@ -10,9 +10,13 @@
     font-size: var(--f-s-h4);
     line-height: 1;
     text-align: center;
-    color: var(--c-text);
-    background-color: var(--c-primary);
+    color: var(--c-white);
+    background-color: var(--c-text);
     transition: var(--transitions);
+
+    &:hover {
+        opacity: 0.8;
+    }
 
     &._big {
         height: 40px;
@@ -26,11 +30,19 @@
         }
     }
 
+    &._with-icon {
+        .icon {
+            margin-right: 16px;
+        }
+    }
+
     &._paper {
         flex-flow: row nowrap;
+        color: var(--c-text);
         background: var(--c-secondary) url('/assets/img/custom/paper.png');
         &:hover {
             background: var(--c-white) url('/assets/img/custom/paper.png');
+            opacity: 1;
         }
 
         .icon {

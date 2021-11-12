@@ -35,4 +35,35 @@
         padding-top: 40px;
         padding-bottom: 60px;
     }
+
+    &._with-women {
+        position: relative;
+        &::before, &::after {
+            @include media-breakpoint-up(lg) {
+                content: '';
+                position: absolute;
+                bottom: 0;
+            }
+        }
+
+        &::before {
+            @include media-breakpoint-up(lg) {
+                left: 0;
+                width: 36vw;
+                height: 36vw;
+                background: url("/assets/img/custom/main-girl-2.png") no-repeat;
+                background-size: contain;
+            }
+        }
+
+        &::after {
+            @include media-breakpoint-up(lg) {
+                right: 0;
+                width: 32vw;
+                height: 32vw;
+                background: url("/assets/img/custom/art-woman.png") no-repeat right;
+                background-size: contain;
+            }
+        }
+    }
 }

@@ -7,6 +7,19 @@
     @include media-breakpoint-up(xxl) {
         padding: 60px 24%;
     }
+
+    &._small {
+        max-width: 540px;
+        padding: 28px 20px;
+
+        @include media-breakpoint-up(xl) {
+            padding: 40px 60px;
+        }
+        @include media-breakpoint-up(xxl) {
+            padding: 60px 80px;
+        }
+    }
+
     &._success {
         display: flex;
         flex-flow: column;
@@ -23,8 +36,11 @@
     }
 
     &__form-desc {
-        margin-bottom: 20px;
         font-size: var(--f-s-small);
         text-align: center;
+    }
+
+    .form {
+        margin-top: 20px;
     }
 }
