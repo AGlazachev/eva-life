@@ -1,0 +1,27 @@
+.p-404 {
+    &__container {
+        display: grid;
+        align-items: center;
+        height: fit-content;
+        min-height: calc(100vh - var(--mobileHeaderHeight));
+        @include media-breakpoint-up(lg) {
+            grid-template-columns: 1fr 1fr;
+            height: 100%;
+            min-height: auto;
+        }
+    }
+
+    &__img {
+        position: relative;
+        z-index: 2;
+        height: inherit;
+        max-height: 400px;
+        margin: 0 auto;
+        @include media-breakpoint-up(xl) {
+            max-height: none;
+            margin: 0;
+            object-fit: contain;
+            object-position: bottom;
+        }
+    }
+}

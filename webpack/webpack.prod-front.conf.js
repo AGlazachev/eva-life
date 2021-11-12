@@ -10,10 +10,16 @@ const buildWebpackConfig = merge(baseWebpackConfig, {
     plugins: [
         new CleanWebpackPlugin({}),
         new HtmlWebpackPlugin({
-            template: './src/twig/pages/index.twig'
+            template: './src/twig/pages/index.twig',
+            filename: 'index.html'
         }),
         new HtmlWebpackPlugin({
-            template: './src/twig/pages/contacts.twig'
+            template: './src/twig/pages/contacts.twig',
+            filename: 'contacts.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/twig/pages/404.twig',
+            filename: '404.html'
         }),
         new FileManagerPlugin({
             events: {

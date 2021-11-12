@@ -26,6 +26,10 @@ const devWebpackConfig = merge(baseWebpackConfig, {
             template: './src/twig/pages/contacts.twig',
             filename: 'contacts.html'
         }),
+        new HtmlWebpackPlugin({
+            template: './src/twig/pages/404.twig',
+            filename: '404.html'
+        }),
         new StylelintPlugin(
             {
                 configFile: '../.stylelintrc',
