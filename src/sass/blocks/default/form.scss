@@ -1,4 +1,22 @@
 .form {
+    --formPoliticsFontSize: var(--f-s-small);
     display: grid;
     grid-gap: 20px;
+
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 12px;
+        align-items: center;
+        font-size: var(--formPoliticsFontSize);
+    }
+
+    &__forgot-link {
+        justify-self: flex-end;
+        text-align: right;
+    }
+
+    &__politics {
+        font-size: var(--formPoliticsFontSize);
+    }
 }
