@@ -1,0 +1,56 @@
+{% extends '../layouts/base.twig' %}
+
+{% block title %}Карточка товара{% endblock %}
+{% block mainClass %}p-card section _with-women{% endblock %}
+{% set sliderItems = [
+    {
+        img: '/assets/img/catalog/card-1.png',
+    },
+    {
+        img: '/assets/img/catalog/card-1.png',
+    },
+    {
+        img: '/assets/img/catalog/card-1.png',
+    },
+    {
+        img: '/assets/img/catalog/card-1.png',
+    },
+    {
+        img: '/assets/img/catalog/card-1.png',
+    },
+    {
+        img: '/assets/img/catalog/card-1.png',
+    },
+    {
+        img: '/assets/img/catalog/card-1.png',
+    },
+] %}
+
+
+{% block content %}
+    <div class="container-xl p-card__container">
+        <div class="card-slider">
+            <div thumbsSlider="" class="swiper card-slider__slide-thumbs js-slider-thumbs">
+                <div class="swiper-wrapper">
+                    {% for item in sliderItems %}
+                        <div class="swiper-slide">
+                            <img src="{{ item.img }}"/>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="swiper card-slider__slide-main js-slider-main">
+                <div class="swiper-wrapper">
+                    {% for item in sliderItems %}
+                        <div class="swiper-slide">
+                            <img src="{{ item.img }}"/>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+{% endblock %}
