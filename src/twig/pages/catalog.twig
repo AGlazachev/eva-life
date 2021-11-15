@@ -3,7 +3,7 @@
 {% block title %}Каталог{% endblock %}
 {% block mainClass %}p-catalog section _with-women{% endblock %}
 
-{% set socialsItem = [
+{% set subMenu = [
     {
         name: 'NEW',
         status: 'active'
@@ -25,8 +25,71 @@
     },
 ] %}
 
+{% set cardItems = [
+    {
+        name: 'Футболка белая',
+        desc: 'Футболка название и какой логотип',
+        img: '/assets/img/catalog/item-1.png',
+        price: '2 000',
+        priceOld: '3 000'
+    },
+    {
+        name: 'Свитшот',
+        desc: 'Футболка название и какой логотип Футболка название и какой логотип',
+        img: '/assets/img/catalog/item-2.png',
+        price: '2 000',
+        priceOld: '3 000'
+    },
+    {
+        name: 'Худи тестирование очень длинного названия',
+        desc: 'Футболка название и какой логотип',
+        img: '/assets/img/catalog/item-3.png',
+        price: '2 000',
+        priceOld: '3 000'
+    },
+    {
+        name: 'Футболка белая',
+        desc: 'Футболка название и какой логотип',
+        img: '/assets/img/catalog/item-4.png',
+        price: '2 000',
+    },
+    {
+        name: 'Худи тестирование очень длинного названия',
+        desc: 'Футболка название и какой логотип Футболка название и какой логотип Футболка название и какой логотип',
+        img: '/assets/img/catalog/item-5.png',
+        price: '2 000',
+        priceOld: '3 000'
+    },
+    {
+        name: 'Футболка белая',
+        desc: 'Футболка название и какой логотип',
+        img: '/assets/img/catalog/item-6.png',
+        price: '2 000',
+        priceOld: '3 000'
+    },
+    {
+        name: 'Футболка белая',
+        desc: 'Футболка название и какой логотип',
+        img: '/assets/img/catalog/item-1.png',
+        price: '2 000',
+        priceOld: '3 000'
+    },
+    {
+        name: 'Футболка белая',
+        desc: 'Футболка название и какой логотип',
+        img: '/assets/img/catalog/item-2.png',
+        price: '2 000',
+    },
+] %}
+
+
 {% block content %}
     <div class="container-xl p-catalog__container">
-
+        {% include '../layouts/sub-menu.twig' %}
+        <div class="p-catalog__items">
+            {% for item in cardItems %}
+                {% include '../components/card-item.twig' %}
+            {% endfor %}
+        </div>
     </div>
 {% endblock %}

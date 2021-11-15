@@ -1,0 +1,38 @@
+.card {
+    display: flex;
+    flex-flow: column;
+    &__img {
+        width: fit-content;
+        height: 174px;
+        margin-bottom: 20px;
+        object-fit: contain;
+    }
+
+    &__name {
+        margin-bottom: 16px;
+        @include truncate-lines(1)
+    }
+
+    &__desc {
+        @include truncate-lines(3);
+        margin-bottom: 16px;
+        font-size: var(--f-s-body-second);
+        color: var(--c-text-second);
+    }
+
+    &__prices {
+        margin-top: auto;
+        margin-bottom: 16px;
+    }
+
+    &__prices-old {
+        font-size: var(--f-s-body-second);
+        text-decoration: line-through;
+        color: var(--c-text-second);
+    }
+
+    &__cart {
+        width: fit-content;
+        min-width: auto;
+    }
+}

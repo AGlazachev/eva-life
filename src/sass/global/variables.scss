@@ -13,7 +13,7 @@ $container-max-widths: (
         md: 720px,
         lg: 960px,
         xl: 1220px,
-        xxl: 1560px
+        xxl: 1500px
 );
 
 @import "../../../node_modules/bootstrap/scss/bootstrap-grid.scss";
@@ -26,6 +26,7 @@ $container-max-widths: (
     --f-s-h2: 32px;
     --f-s-h3: 18px;
     --f-s-body: 16px;
+    --f-s-body-second: 16px;
     --f-s-small: 14px;
     @include media-breakpoint-up(lg) {
         --f-s-title: 80px;

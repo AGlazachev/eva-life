@@ -25,11 +25,14 @@
 @import "layouts/header";
 @import "layouts/footer";
 @import "layouts/main-menu";
+@import "layouts/sub-menu";
 @import "layouts/mobile-side";
 
 @import "blocks/socials";
+@import "blocks/card";
 
 @import "pages/p-index";
+@import "pages/p-catalog";
 @import "pages/p-contacts";
 @import "pages/p-lk";
 @import "pages/p-404";

@@ -1,0 +1,14 @@
+<section class="sub-menu">
+        <ul class="sub-menu__list">
+
+                {% for item in subMenu %}
+                        <li class="sub-menu__item">
+                                {% if item.status != 'active' %}
+                                        <a class="sub-menu__link" href="#">{{ item.name }}</a>
+                                {% else %}
+                                        <span class="sub-menu__link _active">{{ item.name }}</span>
+                                {% endif %}
+                        </li>
+                {% endfor %}
+        </ul>
+</section>

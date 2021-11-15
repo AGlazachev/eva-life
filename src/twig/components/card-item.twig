@@ -1,0 +1,12 @@
+<section class="card">
+    <img class="card__img" src="{{ item.img }}" alt="{{ item.name }}" loading="lazy">
+    <h3 class="card__name">{{ item.name }}</h3>
+    <div class="card__desc">{{ item.desc }}</div>
+    <div class="card__prices">
+        <span class="card__prices-current">{{ item.price }} руб.</span>
+        {% if item.priceOld is defined %}
+            <span class="card__prices-old">{{ item.priceOld }} руб.</span>
+        {% endif %}
+    </div>
+    <button class="card__cart btn _paper" type="button">В корзину</button>
+</section>
