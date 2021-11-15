@@ -1,6 +1,8 @@
 <section class="card">
-    <img class="card__img" src="{{ item.img }}" alt="{{ item.name }}" loading="lazy">
-    <h3 class="card__name">{{ item.name }}</h3>
+    <a class="card__img-link" href="{{ item.link }}">
+        <img class="card__img" src="{{ item.img }}" alt="{{ item.name }}" loading="lazy">
+    </a>
+    <a class="card__name" href="{{ item.link }}">{{ item.name }}</a>
     <div class="card__desc">{{ item.desc }}</div>
     <div class="card__prices">
         <span class="card__prices-current">{{ item.price }} руб.</span>
