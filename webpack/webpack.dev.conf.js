@@ -31,8 +31,8 @@ const devWebpackConfig = merge(baseWebpackConfig, {
             filename: 'contacts.html'
         }),
         new HtmlWebpackPlugin({
-            template: './src/twig/pages/lk.twig',
-            filename: 'lk.html'
+            template: './src/twig/pages/auth.twig',
+            filename: 'auth.html'
         }),
         new HtmlWebpackPlugin({
             template: './src/twig/pages/404.twig',
