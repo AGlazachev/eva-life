@@ -1,0 +1,33 @@
+{% extends '../layouts/base.twig' %}
+
+{% block title %}Оплата и доставка{% endblock %}
+{% block mainClass %}p-delivery section{% endblock %}
+{% set accordion = [
+    {
+        name: 'Доставка по России и СНГ',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, molestiae, vel? Aliquam cumque dicta earum facere perferendis similique vel vitae? Ad asperiores ducimus explicabo fuga illo, iusto pariatur quo unde.'
+    },
+    {
+        name: 'Доставка в другие страны',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, molestiae, vel? Aliquam cumque dicta earum facere perferendis similique vel vitae? Ad asperiores ducimus explicabo fuga illo, iusto pariatur quo unde.'
+    }
+] %}
+
+{% block content %}
+    <div class="container-xl p-delivery__container">
+        <h1 class="h2">Оплата и доставка</h1>
+        <div class="p-delivery__inner">
+            <section class="accordion">
+                {% for item in accordion %}
+                    <div class="accordion__item">
+                        <div class="accordion__btn link">
+                            <span class="accordion__btn-text">{{ item.name }}</span>
+                            <p class="btn-plus"><span></span></p>
+                        </div>
+                        <div class="accordion__text">{{ item.text }}</div>
+                    </div>
+                {% endfor %}
+            </section>
+        </div>
+    </div>
+{% endblock %}

@@ -26,6 +26,10 @@ const buildWebpackConfig = merge(baseWebpackConfig, {
             filename: 'auth.html'
         }),
         new HtmlWebpackPlugin({
+            template: './src/twig/pages/delivery.twig',
+            filename: 'delivery.html'
+        }),
+        new HtmlWebpackPlugin({
             template: './src/twig/pages/404.twig',
             filename: '404.html'
         }),
