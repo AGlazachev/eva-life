@@ -1,0 +1,18 @@
+.b-price {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    &__item {
+        padding: 4px 8px;
+        font-weight: 400;
+        color: var(--c-white);
+        &._current {
+            background-color: var(--c-primary);
+        }
+
+        &._old {
+            text-decoration: line-through;
+            background-color: var(--c-text-second);
+        }
+    }
+}

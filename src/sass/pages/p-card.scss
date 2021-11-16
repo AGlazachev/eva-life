@@ -22,25 +22,8 @@
         color: var(--c-text-second);
     }
 
-    &__price-wrapper {
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: center;
+    .b-price {
         margin-bottom: 20px;
-    }
-
-    &__price {
-        padding: 4px 8px;
-        font-weight: 400;
-        color: var(--c-white);
-        &._current {
-            background-color: var(--c-primary);
-        }
-
-        &._old {
-            text-decoration: line-through;
-            background-color: var(--c-text-second);
-        }
     }
 
     .favorite {
