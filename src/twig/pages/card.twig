@@ -1,56 +1,34 @@
 {% extends '../layouts/base.twig' %}
 
 {% block title %}Карточка товара{% endblock %}
-{% block mainClass %}p-card section _with-women{% endblock %}
-{% set sliderItems = [
-    {
-        img: '/assets/img/catalog/card-1.png',
-    },
-    {
-        img: '/assets/img/catalog/card-1.png',
-    },
-    {
-        img: '/assets/img/catalog/card-1.png',
-    },
-    {
-        img: '/assets/img/catalog/card-1.png',
-    },
-    {
-        img: '/assets/img/catalog/card-1.png',
-    },
-    {
-        img: '/assets/img/catalog/card-1.png',
-    },
-    {
-        img: '/assets/img/catalog/card-1.png',
-    },
-] %}
-
+{% block mainClass %}p-card{% endblock %}
 
 {% block content %}
-    <div class="container-xl p-card__container">
-        <div class="card-slider">
-            <div thumbsSlider="" class="swiper card-slider__slide-thumbs js-slider-thumbs">
-                <div class="swiper-wrapper">
-                    {% for item in sliderItems %}
-                        <div class="swiper-slide">
-                            <img src="{{ item.img }}"/>
-                        </div>
-                    {% endfor %}
+    <div class="section _with-women">
+        <div class="container-xl p-card__container margin-default">
+            {% include '../components/card-slider.twig' %}
+            <div class="p-card__inner">
+                <h1 class="h2  p-card__title">Футболка</h1>
+                <span class="p-card__sku">Артикул: 00324</span>
+                <div class="p-card__price-wrapper">
+                    <span class="p-card__price _current">2000 руб.</span>
+                    <span class="p-card__price _old">3000 руб.</span>
+                    <button class="favorite _only-icon _active" type="button">
+                        <svg class="icon"><use xlink:href="#like"/></svg>
+                    </button>
                 </div>
-            </div>
-            <div class="swiper card-slider__slide-main js-slider-main">
-                <div class="swiper-wrapper">
-                    {% for item in sliderItems %}
-                        <div class="swiper-slide">
-                            <img src="{{ item.img }}"/>
-                        </div>
-                    {% endfor %}
+                <button class="btn _paper _middle">Добавить в корзину</button>
+                <div class="p-card__text">
+                    Универсальная верхняя одежда, идеально подходящая как для летних прогулок, так и для демисезона.
+                    <br>
+                    Пояс, карманы, классический крой.
+                    <br>
+                    Размер Oversize S-L.
+                    <br>
+                    Чтобы получить подробную консультацию или подобрать размер, напишите нам в директ инстаграма.
+                    Ткань: 70% лен + 30% хлопок
                 </div>
             </div>
         </div>
     </div>
-
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
 {% endblock %}

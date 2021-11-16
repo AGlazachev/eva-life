@@ -1,0 +1,21 @@
+.favorite {
+    width: 28px;
+    height: 24px;
+    fill: transparent;
+    stroke: var(--c-primary);
+    &:hover {
+        fill: var(--c-primary);
+    }
+
+    &._active {
+        fill: var(--c-primary);
+        &:hover {
+            fill: transparent;
+        }
+    }
+
+    .icon {
+        width: 100%;
+        height: 100%;
+    }
+}

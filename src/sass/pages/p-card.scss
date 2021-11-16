@@ -1,6 +1,62 @@
 .p-card {
     &__container {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-gap: 40px;
+        @include media-breakpoint-up(xl) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    &__inner {
+        order: -1;
+        @include media-breakpoint-up(xl) {
+            order: 0;
+        }
+    }
+
+    &__sku {
+        display: block;
+        margin-bottom: 20px;
+        font-size: var(--f-s-body-second);
+        color: var(--c-text-second);
+    }
+
+    &__price-wrapper {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    &__price {
+        padding: 4px 8px;
+        font-weight: 400;
+        color: var(--c-white);
+        &._current {
+            background-color: var(--c-primary);
+        }
+
+        &._old {
+            text-decoration: line-through;
+            background-color: var(--c-text-second);
+        }
+    }
+
+    .favorite {
+        margin-left: 16px;
+    }
+
+    &__text {
+        margin-top: 20px;
+        font-size: var(--f-s-body-second);
+        color: var(--c-text-second);
+        @include media-breakpoint-up(xxl) {
+            max-width: 80%;
+        }
+
+        p + p, p + ul, p + ol {
+            margin-top: 8px;
+        }
     }
 }

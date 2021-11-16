@@ -8,6 +8,7 @@
     border-radius: var(--border-radius);
     font-family: var(--f-primary);
     font-size: var(--f-s-h4);
+    font-weight: 700;
     line-height: 1;
     text-align: center;
     color: var(--c-white);
@@ -27,6 +28,14 @@
         @include media-breakpoint-up(xxl) {
             min-width: 312px;
             height: 100px;
+        }
+    }
+
+    &._middle {
+        height: 40px;
+        @include media-breakpoint-up(xxl) {
+            min-width: 312px;
+            height: 60px;
         }
     }
 

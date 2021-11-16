@@ -42,4 +42,4 @@ document.addEventListener('DOMContentLoaded', () => {
             accordionPlusAnimation(item.querySelector('.btn-plus'));
         });
     })
-})
+});
