@@ -12,6 +12,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
             directory: path.join(__dirname, '../public'),
         },
         compress: true,
+        hot: true,
         port: 9000,
         client: {
             overlay: true,
