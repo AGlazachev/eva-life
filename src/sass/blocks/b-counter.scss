@@ -1,0 +1,46 @@
+.b-counter {
+    --fontSizeCounter: var(--f-s-body-second);
+    --textColorCounter: var(--c-text-second);
+    --inputColorCounter: var(--c-primary);
+    &__text {
+        display: block;
+        margin-bottom: 8px;
+        font-size: var(--fontSizeCounter);
+        color: var(--textColorCounter);
+    }
+
+    &__inner {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        grid-gap: 16px;
+        width: fit-content;
+        padding: 8px 16px;
+        border: var(--border);
+        border-color: var(--inputColorCounter);
+    }
+
+    &__input {
+        width: 40px;
+        text-align: center;
+        background-color: transparent;
+    }
+
+    &__btn {
+        padding: 4px;
+        font-size: 24px;
+        line-height: 1;
+        color: var(--inputColorCounter);
+        transition: var(--transitions);
+        &:hover {
+            opacity: 0.7;
+        }
+
+        &[disabled='disabled'] {
+            color: var(--c-text);
+            cursor: default;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}

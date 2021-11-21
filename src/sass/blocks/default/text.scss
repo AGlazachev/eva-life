@@ -1,23 +1,29 @@
-.h1{
-    margin-bottom: 20px;
+.custom-title {
+    margin-bottom: 12px;
     font-family: var(--f-secondary);
     font-style: italic;
-    font-size: var(--f-s-title);
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1;
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 20px;
+    }
+    &._centered {
+        text-align: center;
+    }
+}
+
+.h1{
+    margin-bottom: 20px;
+    font-size: var(--f-s-title);
     @include media-breakpoint-up(lg) {
         margin-bottom: 20px;
     }
 }
 
 .h2 {
-    margin-bottom: 4px;
-    font-family: var(--f-secondary);
-    font-style: italic;
     font-size: var(--f-s-h2);
-    font-weight: 500;
-    line-height: 1;
-    @include media-breakpoint-up(lg) {
-        margin-bottom: 16px;
-    }
+}
+
+.h3 {
+    font-size: var(--f-s-h3);
 }

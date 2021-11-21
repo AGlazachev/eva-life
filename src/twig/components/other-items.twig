@@ -1,0 +1,44 @@
+{% set cardItems = [
+    {
+        name: 'Футболка белая',
+        desc: 'Футболка название и какой логотип',
+        img: '/assets/img/catalog/item-1.png',
+        link: '#',
+        price: '2 000',
+        priceOld: '3 000'
+    },
+    {
+        name: 'Свитшот',
+        desc: 'Футболка название и какой логотип Футболка название и какой логотип',
+        img: '/assets/img/catalog/item-2.png',
+        link: '#',
+        price: '2 000',
+        priceOld: '3 000'
+    },
+    {
+        name: 'Худи тестирование очень длинного названия',
+        desc: 'Футболка название и какой логотип',
+        img: '/assets/img/catalog/item-3.png',
+        link: '#',
+        price: '2 000',
+        priceOld: '3 000'
+    },
+    {
+        name: 'Футболка белая',
+        desc: 'Футболка название и какой логотип',
+        img: '/assets/img/catalog/item-4.png',
+        link: '#',
+        price: '2 000',
+    },
+] %}
+
+<section class="other-items section">
+    <div class="container-xl other-items__container">
+        <h2 class="h3 custom-title _centered">Другие модели</h2>
+        <div class="p-catalog__items">
+            {% for item in cardItems %}
+                {% include '../components/card-item.twig' %}
+            {% endfor %}
+        </div>
+    </div>
+</section>

@@ -8,14 +8,24 @@
         <div class="container-xl p-card__container margin-default">
             {% include '../components/card-slider.twig' %}
             <div class="p-card__inner">
-                <h1 class="h2  p-card__title">Футболка</h1>
+                <h1 class="h2 p-card__title custom-title">Футболка</h1>
                 <span class="p-card__sku">Артикул: 00324</span>
-                <div class="b-price p-card__price-wrapper">
+                <div class="b-price p-card__price-wrapper margin-small">
                     <span class="b-price__item _current">2000 руб.</span>
                     <span class="b-price__item _old">3000 руб.</span>
                     <button class="favorite _only-icon _active" type="button">
                         <svg class="icon"><use xlink:href="#like"/></svg>
                     </button>
+                </div>
+                <div class="p-card__wrapper margin-small">
+                    <div class="b-counter">
+                        <span class="b-counter__text">Количество</span>
+                        <div class="b-counter__inner">
+                            <button class="b-counter__btn js-plus" type="button" disabled="disabled">-</button>
+                            <input class="b-counter__input" type="text" value="1" disabled>
+                            <button class="b-counter__btn js-minus" type="button">+</button>
+                        </div>
+                    </div>
                 </div>
                 <button class="btn _paper _middle">Добавить в корзину</button>
                 <div class="p-card__text">
@@ -31,4 +41,5 @@
             </div>
         </div>
     </div>
+    {% include '../components/other-items.twig' %}
 {% endblock %}

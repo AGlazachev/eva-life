@@ -1,3 +1,10 @@
+.margin-small {
+    margin-bottom: 16px;
+    @include media-breakpoint-up(xxl) {
+        margin-bottom: 24px;
+    }
+}
+
 .margin-default {
     margin-bottom: 24px;
     @include media-breakpoint-up(lg) {
