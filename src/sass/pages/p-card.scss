@@ -11,10 +11,11 @@
     &__wrapper {
         display: grid;
         grid-template-columns: 1fr;
-        grid-gap: 40px;
+        grid-gap: 20px;
         width: fit-content;
         @include media-breakpoint-up(xl) {
             grid-template-columns: 1fr 1fr;
+            grid-gap: 40px;
         }
     }
 
