@@ -1,0 +1,18 @@
+.b-variations {
+    --fontSizeCounter: var(--f-s-body-second);
+    --textColorCounter: var(--c-text-second);
+    --inputColorCounter: var(--c-primary);
+    display: grid;
+    grid-auto-flow: dense;
+    grid-auto-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 16px;
+    width: fit-content;
+    &__text {
+        display: block;
+        grid-column: 1/-1;
+        margin-bottom: 8px;
+        font-size: var(--fontSizeCounter);
+        color: var(--textColorCounter);
+    }
+}

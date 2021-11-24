@@ -1,0 +1,60 @@
+.radio {
+    --radioSize: 32px;
+    --radioSizeChecked: calc(var(--radioSize) / 2);
+    --radioFontSize: var(--f-s-body);
+    --radioColor: var(--c-text); //Цвет текса
+    --radioColorBg: var(--c-white); //Фон не отмеченный
+    --radioColorBgChecked: var(--c-black); // круг внутри radio выделенный
+    --radioBorder: var(--border);
+    --radioBorderColor: var(--c-black); //цвет границы
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: var(--radioSize);
+    height: var(--radioSize);
+    &__input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+
+    &__label {
+        position: relative;
+        width: var(--radioSize);
+        height: var(--radioSize);
+        padding-left: 24px;
+        font-size: var(--radioFontSize);
+        color: var(--radioColor);
+        cursor: pointer;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: var(--radioSize);
+            height: var(--radioSize);
+            border: var(--radioBorder);
+            border-color: var(--radioBorderColor);
+            border-radius: 50%;
+            transition: var(--transitions);
+        }
+    }
+
+    &__input:checked + &__label::before  {
+        border-color: var(--radioBorderColor);
+        background-color: var(--radioColorBg);
+    }
+
+    &__input:checked + &__label::after  {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: var(--radioSizeChecked);
+        height: var(--radioSizeChecked);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        background-color: var(--radioColorBgChecked);
+    }
+}
