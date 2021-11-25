@@ -29,6 +29,7 @@
     }
 
     &__cart {
+        position: relative;
         padding: 8px 12px;
         &:hover {
             border-color: var(--c-primary);
@@ -37,6 +38,21 @@
         @include media-breakpoint-up(lg) {
             border: var(--border);
         }
+    }
+
+    &__cart-num {
+        position: absolute;
+        top: 4px;
+        left: 24px;
+        display: grid;
+        place-items: center;
+        min-width: 16px;
+        min-height: 16px;
+        border-radius: 50%;
+        font-size: 10px;
+        line-height: 1;
+        color: var(--c-white);
+        background-color: var(--c-primary);
     }
 
     &__link-text {
@@ -52,5 +68,4 @@
             display: block;
         }
     }
-
 }

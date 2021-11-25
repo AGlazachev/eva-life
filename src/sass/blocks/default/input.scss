@@ -11,7 +11,7 @@
 
     &__text {
         width: 100%;
-        height: 60px;
+        height: 40px;
         padding: 14px 16px;
         border: var(--border);
         border-color: var(--inputBorderColor);
@@ -31,6 +31,10 @@
 
         &:active, &:focus {
             opacity: 0.8;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            height: 60px;
         }
     }
 

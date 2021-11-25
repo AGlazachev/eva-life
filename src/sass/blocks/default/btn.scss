@@ -14,7 +14,7 @@
     color: var(--c-white);
     background-color: var(--c-text);
     transition: var(--transitions);
-
+    cursor: pointer;
     &:hover {
         opacity: 0.8;
     }
@@ -43,6 +43,12 @@
         .icon {
             margin-right: 16px;
         }
+    }
+
+    &._only-icon {
+        width: fit-content;
+        padding: 0;
+        background-color: transparent;
     }
 
     &._paper {

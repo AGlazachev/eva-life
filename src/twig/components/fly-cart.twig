@@ -1,0 +1,84 @@
+{% set cartItems = [
+    {
+        name: 'Футболка белая',
+        desc: 'Футболка название и какой логотип',
+        img: '/assets/img/catalog/item-1.png',
+        link: '#',
+        price: '2 000',
+        priceOld: '3 000'
+    },
+    {
+        name: 'Футболка белая',
+        desc: 'Футболка название и какой логотип',
+        img: '/assets/img/catalog/item-1.png',
+        link: '#',
+        price: '2 000',
+        priceOld: '3 000'
+    },
+    {
+        name: 'Футболка белая',
+        desc: 'Футболка название и какой логотип',
+        img: '/assets/img/catalog/item-1.png',
+        link: '#',
+        price: '2 000',
+        priceOld: '3 000'
+    },
+] %}
+
+<section class="fly-cart scroll-block hidden js-fly-cart">
+    <button class="fly-cart__close close js-close-fly-cart" title="close" type="button">
+        <svg class="icon" aria-hidden="true">
+            <use href="#close"/>
+        </svg>
+    </button>
+    <div class="fly-cart__list margin-default">
+        {% for key, item in cartItems %}
+            <section class="fly-cart__item">
+                    <img class="fly-cart__item-img" src="{{ item.img }}" alt="{{ item.name }}">
+                    <div class="fly-cart__item-inner">
+                        <p class="fly-cart__item-name h3">{{ item.name }}</p>
+                        <span class="fly-cart__item-sku">Артикул: 00324</span>
+                        <button class="link _revert fly-cart__item-close" type="button">Удалить</button>
+                        <div class="b-price margin-small">
+                            <span class="b-price__item _current">2000 руб.</span>
+                            <span class="b-price__item _old">3000 руб.</span>
+                        </div>
+                        <div class="b-variations">
+                        <span class="b-variations__text">Цвет</span>
+                        <div class="radio" style="--radioColorBg: #000; --radioColorBgChecked: #fff" title="Белый">
+                            <input class="radio__input" id="white{{ key }}" type="radio" name="color{{ key }}" checked>
+                            <label class="radio__label link" for="white{{ key }}"></label>
+                        </div>
+                        <div class="radio" style="--radioColorBg: #fff" title="Чёрный">
+                            <input class="radio__input" id="black{{ key }}" type="radio" name="color{{ key }}">
+                            <label class="radio__label link" for="black{{ key }}"></label>
+                        </div>
+                    </div>
+                        <div class="b-counter">
+                        <span class="b-counter__text">Количество</span>
+                        <div class="b-counter__inner">
+                            <button class="b-counter__btn js-plus" type="button" disabled="disabled">-</button>
+                            <input class="b-counter__input" type="text" value="1" disabled>
+                            <button class="b-counter__btn js-minus" type="button">+</button>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+        {% endfor %}
+    </div>
+    <div class="fly-cart__amount margin-small">
+        <span class="fly-cart__amount-text">Итого:</span>
+        <span class="fly-cart__amount-num">4000 руб.</span>
+    </div>
+    <div class="fly-cart__promocode margin-small">
+        <div class="fly-cart__promocode-input input">
+            <input class="input__text" type="email" name="email" placeholder="E-mail">
+        </div>
+        <button class="fly-cart__promocode-btn btn _middle _paper">Применить</button>
+    </div>
+    <div class="fly-cart__amount margin-default">
+        <span class="fly-cart__amount-text">Ваша скидка:</span>
+        <span class="fly-cart__amount-num">Название скидки</span>
+    </div>
+    <button class="fly-cart__get-order btn _big _paper">Оформить заказ</button>
+</section>

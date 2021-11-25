@@ -1,0 +1,25 @@
+.scroll-block {
+    &::-webkit-scrollbar-track {
+        border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: var(--c-text-second);
+    }
+
+    &:hover::-webkit-scrollbar-thumb {
+        background-color: var(--c-primary);
+    }
+
+    &._horizontal {
+        &::-webkit-scrollbar {
+            width: 4px;
+            height: 2px;
+        }
+    }
+}

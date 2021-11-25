@@ -10,5 +10,6 @@ import inputMask from './modules/inpitMask';
 import accordion from './modules/accordion';
 import popup from './modules/popup';
 import sliders from './modules/sliders';
+import fly_cart from './modules/fly-cart';
 
 require('./scripts');
