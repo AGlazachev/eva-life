@@ -67,6 +67,7 @@
 
         &::after {
             @include media-breakpoint-up(xl) {
+                bottom: -56px;
                 right: -20px;
                 width: 28vw;
                 height: 28vw;

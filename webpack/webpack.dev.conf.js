@@ -44,6 +44,10 @@ const devWebpackConfig = merge(baseWebpackConfig, {
             filename: 'card.html'
         }),
         new HtmlWebpackPlugin({
+            template: './src/twig/pages/success.twig',
+            filename: 'success.html'
+        }),
+        new HtmlWebpackPlugin({
             template: './src/twig/pages/404.twig',
             filename: '404.html'
         }),
