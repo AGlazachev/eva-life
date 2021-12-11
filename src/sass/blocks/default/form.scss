@@ -5,10 +5,18 @@
 
     &__inner {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         grid-gap: 12px;
         align-items: center;
-        font-size: var(--formPoliticsFontSize);
+        @include media-breakpoint-up(sm) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &._second {
+            @include media-breakpoint-up(sm) {
+                grid-template-columns: 1.5fr 1fr;
+            }
+        }
     }
 
     &__forgot-link {
@@ -18,5 +26,9 @@
 
     &__politics {
         font-size: var(--formPoliticsFontSize);
+    }
+
+    .checkbox {
+        --checkboxFontSize: var(--f-s-body-second);
     }
 }

@@ -11,5 +11,6 @@ import accordion from './modules/accordion';
 import popup from './modules/popup';
 import sliders from './modules/sliders';
 import fly_cart from './modules/fly-cart';
+import select2 from './modules/select2';
 
 require('./scripts');

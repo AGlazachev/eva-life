@@ -1,0 +1,40 @@
+.select2 {
+    --inputFontSize: var(--f-s-body);
+    --inputColorPlaceholder: var(--c-text-second);
+    --labelFontSize: var(--f-s-small);
+    position: relative;
+    &__label {
+        position: absolute;
+        top: 0;
+        left: 16px;
+        width: 100%;
+        font-size: var(--labelFontSize);
+        font-weight: 400;
+        color: var(--inputColorPlaceholder);
+        transition: var(--transitions);
+        pointer-events: none;
+    }
+
+    &__select {
+        width: 100%;
+    }
+
+    .select2-selection {
+        height: 60px !important;
+    }
+
+    .select2-container {
+        width: 100% !important;
+    }
+
+    .select2-selection__rendered {
+        padding: 14px 16px !important;
+        font-size: var(--inputFontSize);
+        line-height: 1.5 !important;
+    }
+
+    .select2-selection__arrow {
+        top: 18px !important;
+        right: 4px !important;
+    }
+}

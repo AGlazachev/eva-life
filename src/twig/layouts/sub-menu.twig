@@ -3,7 +3,7 @@
         {% for item in subMenu %}
             <li class="sub-menu__item">
                 {% if item.status != 'active' %}
-                    <a class="sub-menu__link" href="#">{{ item.name }}</a>
+                    <a class="sub-menu__link" href="{{ item.link }}">{{ item.name }}</a>
                 {% else %}
                     <span class="sub-menu__link _active">{{ item.name }}</span>
                 {% endif %}

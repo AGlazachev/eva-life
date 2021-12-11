@@ -1,4 +1,4 @@
-.input {
+.input2 {
     --inputFontSize: var(--f-s-body);
     --inputBorderColor: var(--c-lines);
     --inputBorderColorActive: var(--c-primary);
@@ -8,7 +8,19 @@
     --inputBg: transparent;
     --inputErrorFontSize: var(--f-s-small);
     --inputErrorColor: var(--c-error);
+    --labelFontSize: var(--f-s-small);
+    position: relative;
     width: 100%;
+
+    &__label {
+        position: absolute;
+        top: 0;
+        left: 16px;
+        font-size: var(--labelFontSize);
+        font-weight: 400;
+        color: var(--inputColorPlaceholder);
+        transition: var(--transitions);
+    }
 
     &__text {
         width: 100%;
@@ -22,16 +34,16 @@
         background-color: var(--inputBg);
         transition: var(--transitions);
 
-        &::placeholder {
-            color: var(--inputColorPlaceholder);
-        }
-
         &:hover {
             opacity: 0.8;
         }
 
         &:active, &:focus {
             border-color: var(--inputBorderColorActive);
+
+            + label {
+                color: var(--inputBorderColorActive);
+            }
         }
 
         @include media-breakpoint-up(xxl) {
@@ -42,9 +54,5 @@
     &__error {
         font-size: var(--inputErrorFontSize);
         color: var(--inputErrorColor);
-    }
-
-    &._textarea {
-        height: auto;
     }
 }

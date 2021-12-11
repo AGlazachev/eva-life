@@ -1,5 +1,10 @@
 .p-lk {
-    .form-inner {
-        margin: 0 auto;
+    &__sub-title {
+      font-weight: 700;
+    }
+
+    &__form {
+        max-width: 600px;
+        margin: 40px auto 0;
     }
 }

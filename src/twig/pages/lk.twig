@@ -1,0 +1,96 @@
+{% extends '../layouts/base.twig' %}
+
+{% block title %}Контактная информация{% endblock %}
+{% block mainClass %}p-lk section{% endblock %}
+{% set subMenu = [
+    {
+        name: 'Контактная информация',
+        status: 'active'
+    },
+    {
+        name: 'История заказов',
+        link: '/history.html'
+    },
+    {
+        name: 'Список желаний',
+        link: '/favorites.html'
+    },
+    {
+        name: 'Выход',
+        link: '#'
+    },
+] %}
+
+{% block content %}
+    <div class="container-xl p-lk__container">
+        <h1 class="h2 margin-default custom-title _centered">Личный кабинет</h1>
+        {% include '../layouts/sub-menu.twig' %}
+        <form class="p-lk__form form" action="/">
+            <p class="p-lk__sub-title">Редактирование личных данных</p>
+            <div class="form__inner">
+                <div class="input2">
+                    <input class="input2__text" type="text" id="surname" required>
+                    <label class="input2__label" for="surname">Фамилия</label>
+                </div>
+                <div class="input2">
+                    <input class="input2__text" type="text" id="name" required>
+                    <label class="input2__label" for="name">Имя</label>
+                </div>
+            </div>
+            <div class="input2">
+                <input class="input2__text" type="text" id="patronymic">
+                <label class="input2__label" for="patronymic">Отчество</label>
+            </div>
+            <div class="form__inner">
+                <div class="input2">
+                    <input class="input2__text phone" type="tel" id="phone">
+                    <label class="input2__label" for="phone">Телефон</label>
+                </div>
+                <div class="input2">
+                    <input class="input2__text phone" type="tel" id="dopPhone">
+                    <label class="input2__label" for="dopPhone">Дополнительный телефон</label>
+                </div>
+            </div>
+            <div class="select2">
+                <select class="js-select select2__select" name="country" id="country">
+                    <option value="AL">Россия</option>
+                    <option value="WY">Китай</option>
+                </select>
+                <label class="select2__label" for="country">Страна/Регион</label>
+            </div>
+            <div class="form__inner">
+                <div class="select2">
+                    <select class="js-select select2__select" name="city" id="city">
+                        <option value="AL1">Москва</option>
+                        <option value="WY1">Санкт-Петербург</option>
+                    </select>
+                    <label class="select2__label" for="city">Город</label>
+                </div>
+                <div class="select2">
+                    <select class="js-select select2__select" name="obl" id="obl">
+                        <option value="AL2">Московская</option>
+                        <option value="WY2">Ленинградская</option>
+                    </select>
+                    <label class="select2__label" for="obl">Область</label>
+                </div>
+            </div>
+            <div class="form__inner _second">
+                <div class="input2">
+                    <input class="input2__text" type="text" id="address">
+                    <label class="input2__label" for="address">Адрес доставки</label>
+                </div>
+                <div class="input2">
+                    <input class="input2__text" type="number" id="zipcode">
+                    <label class="input2__label" for="zipcode">Индекс</label>
+                </div>
+            </div>
+            <div class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="remember" name="remember">
+                <label class="checkbox__label link" for="remember">
+                    Сохранить эту информацию для дальнейших покупок
+                </label>
+            </div>
+            <button  class="btn _paper _middle"><span>Сохранить</span></button>
+        </form>
+    </div>
+{% endblock %}

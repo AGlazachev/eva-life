@@ -1,5 +1,6 @@
 .form-inner {
     padding: 40px 40px;
+    margin: 0 auto;
     background-color: var(--c-white);
     @include media-breakpoint-up(xl) {
         padding: 60px 20%;
