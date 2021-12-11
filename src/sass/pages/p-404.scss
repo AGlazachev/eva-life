@@ -5,17 +5,22 @@
         height: fit-content;
         min-height: calc(100vh - var(--mobileHeaderHeight));
         @include media-breakpoint-up(lg) {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1.4fr 1fr;
             height: 100%;
             min-height: auto;
         }
+    }
+
+    &__wrapper {
+        height: 100%;
+        object-fit: contain;
     }
 
     &__img {
         position: relative;
         z-index: 2;
         height: inherit;
-        max-height: 400px;
+        max-height: 600px;
         margin: 0 auto;
         @include media-breakpoint-up(xl) {
             max-height: none;
@@ -23,5 +28,9 @@
             object-fit: contain;
             object-position: bottom;
         }
+    }
+
+    .h1 {
+        text-align: center;
     }
 }
