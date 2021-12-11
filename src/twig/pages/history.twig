@@ -1,0 +1,32 @@
+{% extends '../layouts/base.twig' %}
+
+{% block title %}История заказов{% endblock %}
+{% block mainClass %}p-history section{% endblock %}
+{% set subMenu = [
+    {
+        name: 'Контактная информация',
+        link: '/lk.html'
+    },
+    {
+        name: 'История заказов',
+        status: 'active'
+    },
+    {
+        name: 'Список желаний',
+        link: '/favorites.html'
+    },
+    {
+        name: 'Выход',
+        link: '#'
+    },
+] %}
+
+{% block content %}
+    <div class="container-xl p-history__container">
+        <h1 class="h2 margin-default custom-title _centered">Личный кабинет</h1>
+        {% include '../layouts/sub-menu.twig' %}
+        <div class="p-history__order-list">
+            {% include '../components/current-order.twig' %}
+        </div>
+    </div>
+{% endblock %}

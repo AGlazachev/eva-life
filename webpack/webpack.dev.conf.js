@@ -52,6 +52,10 @@ const devWebpackConfig = merge(baseWebpackConfig, {
             filename: 'lk.html'
         }),
         new HtmlWebpackPlugin({
+            template: './src/twig/pages/history.twig',
+            filename: 'history.html'
+        }),
+        new HtmlWebpackPlugin({
             template: './src/twig/pages/404.twig',
             filename: '404.html'
         }),
