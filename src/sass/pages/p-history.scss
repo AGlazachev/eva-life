@@ -1,5 +1,18 @@
 .p-history {
-    &__order-list {
+    &__order-list + &__order-list {
         margin-top: 40px;
+    }
+
+    &__order-list-name {
+        display: block;
+        margin-bottom: 16px;
+    }
+
+    .sub-menu {
+        margin-bottom: 40px;
+    }
+
+    .current-order + .current-order {
+        margin-top: 28px;
     }
 }

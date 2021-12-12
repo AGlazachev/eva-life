@@ -27,6 +27,12 @@
         {% include '../layouts/sub-menu.twig' %}
         <div class="p-history__order-list">
             {% include '../components/current-order.twig' %}
+            {% include '../components/current-order.twig' %}
+        </div>
+        <div class="p-history__order-list _completed">
+            <strong class="p-history__order-list-name">Завершенные заказы</strong>
+            {% include '../components/current-order.twig' %}
+            {% include '../components/current-order.twig' %}
         </div>
     </div>
 {% endblock %}
