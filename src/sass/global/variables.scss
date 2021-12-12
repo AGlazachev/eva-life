@@ -25,6 +25,7 @@ $container-max-widths: (
     --f-s-title: 52px;
     --f-s-h2: 32px;
     --f-s-h3: 18px;
+    --f-s-h4: 20px;
     --f-s-body: 16px;
     --f-s-body-second: 16px;
     --f-s-small: 14px;
@@ -32,12 +33,14 @@ $container-max-widths: (
         --f-s-title: 80px;
         --f-s-h2: 40px;
         --f-s-h3: 20px;
+        --f-s-h4: 24px;
         --f-s-body: 18px;
     }
     @include media-breakpoint-up(xl) {
         --f-s-title: 100px;
         --f-s-h2: 52px;
         --f-s-h3: 28px;
+        --f-s-h4: 26px;
         --f-s-body: 20px;
     }
     @include media-breakpoint-up(xxl) {

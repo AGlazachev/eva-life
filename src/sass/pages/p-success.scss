@@ -25,7 +25,10 @@
         }
     }
 
-    .current-order__body {
-        padding: 0;
+    .current-order {
+        &__body {
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
 }

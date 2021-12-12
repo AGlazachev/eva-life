@@ -1,10 +1,12 @@
 .current-order {
     overflow: auto;
 
-
     &__inner {
         min-width: 900px;
         border: var(--border);
+        &._no-border {
+            border: none;
+        }
     }
 
     &__header {

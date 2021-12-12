@@ -58,6 +58,10 @@ const buildWebpackConfig = merge(baseWebpackConfig, {
             filename: 'favorites.html'
         }),
         new HtmlWebpackPlugin({
+            template: './src/twig/pages/order.twig',
+            filename: 'order.html'
+        }),
+        new HtmlWebpackPlugin({
             template: './src/twig/pages/404.twig',
             filename: '404.html'
         }),

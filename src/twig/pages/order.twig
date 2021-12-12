@@ -1,0 +1,247 @@
+{% extends '../layouts/base.twig' %}
+
+{% block title %}Оформление заказа{% endblock %}
+{% block mainClass %}p-order section{% endblock %}
+
+{% block content %}
+    <div class="container-xl p-order__container">
+        <div class="margin-small p-order__path">
+            <ul class="p-order__path-list">
+                <li class="js-path-all js-path-first p-order__path-item _active">
+                    <span>Способы оплаты</span>
+                </li>
+                <li class="js-path-all js-path-second p-order__path-item">
+                    <span>Данные получателя</span>
+                </li>
+                <li class="js-path-all js-path-third p-order__path-item">
+                    <span>Подтверждение заказа</span>
+                </li>
+            </ul>
+        </div>
+        <section id="firstStep" class="order-first-step p-order__step js-order-steps">
+            <p class="p-order__step-title">Данные о доставке</p>
+            <div class="order-first-step__form margin-default">
+                <div class="select2">
+                    <select class="js-select select2__select" name="country" id="country">
+                        <option value="AL">Россия</option>
+                        <option value="WY">Китай</option>
+                    </select>
+                    <label class="select2__label" for="country">Страна/Регион</label>
+                </div>
+                <div class="select2">
+                    <select class="js-select select2__select" name="city" id="city">
+                        <option value="AL1">Москва</option>
+                        <option value="WY1">Санкт-Петербург</option>
+                    </select>
+                    <label class="select2__label" for="city">Город</label>
+                </div>
+                <div class="select2">
+                    <select class="js-select select2__select" name="obl" id="obl">
+                        <option value="AL2">Московская</option>
+                        <option value="WY2">Ленинградская</option>
+                    </select>
+                    <label class="select2__label" for="obl">Область</label>
+                </div>
+
+            </div>
+            <p class="p-order__step-title">Варианты доставки</p>
+            <div class="p-order__tabs">
+                <div class="p-order__tabs-btns js-order-tabs-btn">
+                    <button class="p-order__tabs-item _active" type="button">Пункты выдачи</button>
+                    <button class="p-order__tabs-item" type="button">Курьер</button>
+                    <button class="p-order__tabs-item" type="button">Почта</button>
+                    <button class="p-order__tabs-item" type="button">Самовывоз</button>
+                </div>
+            </div>
+            <div class="margin-small p-order__delivery-list">
+                <div class="p-order__delivery-list-inner">
+                    <div class="p-order__delivery-item">
+                        <img class="p-order__delivery-item-img" src="/assets/img/custom/dhl.png" alt="">
+                        <p class="p-order__delivery-item-text">До двери</p>
+                        <p class="p-order__delivery-item-text">1 день</p>
+                        <strong class="p-order__delivery-item-text _price">500 руб.</strong>
+                    </div>
+                    <div class="p-order__delivery-item">
+                        <img class="p-order__delivery-item-img" src="/assets/img/custom/dhl.png" alt="">
+                        <p class="p-order__delivery-item-text">До пункта выдачи</p>
+                        <p class="p-order__delivery-item-text">1 день</p>
+                        <strong class="p-order__delivery-item-text _price">1 500 руб.</strong>
+                    </div>
+                </div>
+            </div>
+            <p>Стоимость заказа с доставкой</p>
+            <strong class="margin-small p-order__delivery-price">500 руб.</strong>
+            <div class="p-order__btn-inner">
+                <a href="/" class="link _revert">Назад</a>
+                <button class="btn _paper _middle js-go-second-step" type="button">Далее</button>
+            </div>
+        </section>
+        <section id="secondStep" class="hidden p-order__step js-order-steps form">
+            <p class="p-order__step-title">Данные</p>
+            <div class="form__inner">
+                <div class="input2">
+                    <input class="input2__text" type="text" id="surname" required>
+                    <label class="input2__label" for="surname">Фамилия</label>
+                </div>
+                <div class="input2">
+                    <input class="input2__text" type="text" id="name" required>
+                    <label class="input2__label" for="name">Имя</label>
+                </div>
+            </div>
+            <div class="input2">
+                <input class="input2__text" type="text" id="patronymic">
+                <label class="input2__label" for="patronymic">Отчество</label>
+            </div>
+            <div class="form__inner">
+                <div class="input2">
+                    <input class="input2__text phone" type="tel" id="phone">
+                    <label class="input2__label" for="phone">Телефон</label>
+                </div>
+                <div class="input2">
+                    <input class="input2__text phone" type="tel" id="dopPhone">
+                    <label class="input2__label" for="dopPhone">Дополнительный телефон</label>
+                </div>
+            </div>
+            <div class="input2">
+                <input class="input2__text" type="email" id="email">
+                <label class="input2__label" for="email">Email</label>
+            </div>
+            <div class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="newsletter" name="newsletter">
+                <label class="checkbox__label link" for="newsletter">
+                    я не против получать новости и предложения
+                </label>
+            </div>
+            <div class="input2">
+                <input class="input2__text" type="text" id="address">
+                <label class="input2__label" for="address">Адрес доставки</label>
+            </div>
+            <div class="p-order__btn-inner">
+                <button  class="link _revert js-go-first-step js-go-first-step" type="button">Назад</button>
+                <button class="btn _paper _middle js-go-third-step" type="button">Далее</button>
+            </div>
+        </section>
+        <section id="thirdStep" class="hidden p-order__step js-order-steps">
+            <p class="p-order__step-title">Товары в заказе</p>
+            <section class="current-order">
+                <div class="current-order__inner _no-border">
+                    <div class="current-order__body js-order-body">
+                        <div class="current-order__items margin-default">
+                            <div class="current-order__row">
+                                <img class="current-order__img" src="/assets/img/catalog/item-1.png" alt="">
+                                <div class="current-order__col">
+                                    <span class="current-order__name">Комикс</span>
+                                    <span class="current-order__header-desc">Артикул №00001</span>
+                                </div>
+                                <div class="current-order__col">
+                                    <strong>M</strong>
+                                </div>
+                                <div class="current-order__col">
+                                    <span class="current-order__header-desc">Стоимость товара</span>
+                                    <strong>2 000 ₽</strong>
+                                </div>
+                                <div class="current-order__col">
+                                    <span class="current-order__header-desc">Количество</span>
+                                    <strong>1</strong>
+                                </div>
+                                <div class="current-order__col">
+                                    <span class="current-order__header-desc">Стоимость доставки</span>
+                                    <strong>500 ₽</strong>
+                                </div>
+                            </div>
+                            <div class="current-order__row">
+                                <img class="current-order__img" src="/assets/img/catalog/item-2.png" alt="">
+                                <div class="current-order__col">
+                                    <span class="current-order__name">Комикс</span>
+                                    <span class="current-order__header-desc">Артикул №00001</span>
+                                </div>
+                                <div class="current-order__col"></div>
+                                <div class="current-order__col">
+                                    <span class="current-order__header-desc">Стоимость товара</span>
+                                    <strong>2 000 ₽</strong>
+                                </div>
+                                <div class="current-order__col">
+                                    <span class="current-order__header-desc">Количество</span>
+                                    <strong>1</strong>
+                                </div>
+                                <div class="current-order__col">
+                                    <span class="current-order__header-desc">Стоимость доставки</span>
+                                    <strong>500 ₽</strong>
+                                </div>
+                            </div>
+                            <div class="current-order__row">
+                                <img class="current-order__img" src="/assets/img/catalog/item-3.png" alt="">
+                                <div class="current-order__col">
+                                    <span class="current-order__name">Комикс</span>
+                                    <span class="current-order__header-desc">Артикул №00001</span>
+                                </div>
+                                <div class="current-order__col"></div>
+                                <div class="current-order__col">
+                                    <span class="current-order__header-desc">Стоимость товара</span>
+                                    <strong>2 000 ₽</strong>
+                                </div>
+                                <div class="current-order__col">
+                                    <span class="current-order__header-desc">Количество</span>
+                                    <strong>1</strong>
+                                </div>
+                                <div class="current-order__col">
+                                    <span class="current-order__header-desc">Стоимость доставки</span>
+                                    <strong>500 ₽</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="current-order__total">
+                            <div class="current-order__total-row">
+                                <span class="current-order__total-desc">Всего</span>
+                                <strong class="current-order__total-term">7 000 ₽</strong>
+                            </div>
+                            <div class="current-order__total-row">
+                                <span class="current-order__total-desc">Промокод</span>
+                                <strong class="current-order__total-term">-500 ₽</strong>
+                            </div>
+                            <div class="current-order__total-row">
+                                <span class="current-order__total-desc">Стоимость доставки</span>
+                                <strong class="current-order__total-term">500 ₽</strong>
+                            </div>
+                            <div class="current-order__total-row">
+                                <span class="current-order__total-desc">Итого с доставкой</span>
+                                <strong class="current-order__total-term _color">7 000 ₽</strong>
+                            </div>
+                        </div>
+                        <div class="current-order__info">
+                            <div class="current-order__info-item margin-default">
+                                <span class="current-order__info-item-desc">Получатель</span>
+                                <p class="current-order__info-item-term">
+                                    Иванов Иван Иванович, +437238924983, example@mail.com
+                                </p>
+                            </div>
+                            <div class="current-order__info-item margin-default">
+                                <span class="current-order__info-item-desc">Способ доставки</span>
+                                <p class="current-order__info-item-term">CDEK, До двери, 1 день</p>
+                            </div>
+                            <div class="current-order__info-item margin-default">
+                                <span class="current-order__info-item-desc">Адрес доставки</span>
+                                <p class="current-order__info-item-term">
+                                    Россия, Московская область, Москва, Пушкина 123
+                                </p>
+                            </div>
+                        </div>
+                        <div class="checkbox margin-small">
+                            <input class="checkbox__input" type="checkbox" id="politics" name="politics">
+                            <label class="checkbox__label link" for="politics">
+                                Я прочитал и согласен с условиями политики обработки персональных данных
+                            </label>
+                        </div>
+                        <div class="input">
+                            <textarea class="input__text _textarea" placeholder="Коментарий к заказу"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="p-order__btn-inner">
+                <button  class="link _revert js-go-second-step" type="button">Назад</button>
+                <button class="btn _paper _middle" type="button">Перейти к оплате</button>
+            </div>
+        </section>
+    </div>
+{% endblock %}

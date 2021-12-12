@@ -28,8 +28,10 @@
     }
 
     .select2-selection__rendered {
+        margin-top: 4px;
         padding: 14px 16px !important;
         font-size: var(--inputFontSize);
+        font-weight: 400;
         line-height: 1.5 !important;
     }
 

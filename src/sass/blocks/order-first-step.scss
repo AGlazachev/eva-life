@@ -1,0 +1,7 @@
+.order-first-step {
+    &__form {
+        display: grid;
+        grid-gap: 20px;
+        max-width: 600px;
+    }
+}

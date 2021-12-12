@@ -13,5 +13,6 @@ import sliders from './modules/sliders';
 import fly_cart from './modules/fly-cart';
 import select2 from './modules/select2';
 import customOrder from './modules/customOrder';
+import order from './modules/order';
 
 require('./scripts');

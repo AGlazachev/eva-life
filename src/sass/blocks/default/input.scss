@@ -18,6 +18,7 @@
         border-color: var(--inputBorderColor);
         border-radius: var(--inputBorderRadius);
         font-size: var(--inputFontSize);
+        font-weight: 400;
         color: var(--inputColor);
         background-color: var(--inputBg);
         transition: var(--transitions);
@@ -46,5 +47,6 @@
 
     &._textarea {
         height: auto;
+        min-height: 120px;
     }
 }
