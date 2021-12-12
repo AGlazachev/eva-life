@@ -1,0 +1,27 @@
+.favorite-item {
+    display: grid;
+    grid-gap: 20px;
+    justify-content: center;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    @include media-breakpoint-up(md) {
+        grid-template-columns: 260px auto 1fr;
+        justify-content: flex-start;
+        align-items: center;
+        grid-gap: 28px;
+    }
+
+    .btn {
+        @include media-breakpoint-up(md) {
+            width: fit-content;
+            margin-left: auto;
+        }
+    }
+
+    &__img {
+        @include media-breakpoint-up(md) {
+            margin: 0 auto;
+        }
+    }
+}

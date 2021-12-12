@@ -1,0 +1,48 @@
+{% extends '../layouts/base.twig' %}
+
+{% block title %}Список желаний{% endblock %}
+{% block mainClass %}p-favorites section{% endblock %}
+{% set subMenu = [
+    {
+        name: 'Контактная информация',
+        link: '/lk.html'
+    },
+    {
+        name: 'История заказов',
+        link: '/history.html'
+    },
+    {
+        name: 'Список желаний',
+        status: 'active'
+    },
+    {
+        name: 'Выход',
+        link: '#'
+    },
+] %}
+{% set favorites = [
+    {
+        name: 'Футболка белая',
+        img: '/assets/img/catalog/item-1.png',
+        link: '#',
+        price: '2 000',
+    },
+    {
+        name: 'Футболка белая 2',
+        img: '/assets/img/catalog/item-2.png',
+        link: '#',
+        price: '3 000',
+    },
+] %}
+
+{% block content %}
+    <div class="container-xl p-favorites__container">
+        <h1 class="h2 margin-default custom-title _centered">Личный кабинет</h1>
+        {% include '../layouts/sub-menu.twig' %}
+        <div class="p-favorites__list">
+            {% for item in favorites %}
+                {% include '../components/favorite-item.twig' %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
