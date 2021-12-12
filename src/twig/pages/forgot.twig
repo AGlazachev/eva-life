@@ -1,0 +1,23 @@
+{% extends '../layouts/base.twig' %}
+
+{% block title %}Восстановление пароля{% endblock %}
+{% block bodyClass %}_bg{% endblock %}
+{% block mainClass %}p-lk section _with-women{% endblock %}
+
+{% block content %}
+<div class="container-xl p-lk__container">
+    <div class="form-inner _small">
+        <p class="form-inner__form-title">Восстановить аккаунт</p>
+        <form action="/" class="form">
+            <div class="input">
+                <input class="input__text" type="email" placeholder="Ваш email" required>
+            </div>
+            <button class="btn _paper ">Восстановить пароль</button>
+            <button class="btn _with-icon">
+                <svg class="icon"><use xlink:href="#google"/></svg>
+                <span>Или войдите через Google </span>
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -24,6 +24,12 @@
         text-align: right;
     }
 
+    &__reg-link {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
     &__politics {
         font-size: var(--formPoliticsFontSize);
     }

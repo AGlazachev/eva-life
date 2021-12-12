@@ -1,0 +1,28 @@
+{% extends '../layouts/base.twig' %}
+
+{% block title %}Регистрация{% endblock %}
+{% block bodyClass %}_bg{% endblock %}
+{% block mainClass %}p-lk section _with-women{% endblock %}
+
+{% block content %}
+    <div class="container-xl p-lk__container">
+        <div class="form-inner _small">
+            <p class="form-inner__form-title">Регистрация</p>
+            <form action="/" class="form">
+                <div class="input">
+                    <input class="input__text" type="text" placeholder="Имя" required>
+                </div>
+                <div class="input">
+                    <input class="input__text" type="email" placeholder="Ваш email" required>
+                </div>
+                <div class="input">
+                    <input class="input__text" type="password" placeholder="Пароль" required>
+                </div>
+                <div class="input">
+                    <input class="input__text" type="password" placeholder="Повторить пароль" required>
+                </div>
+                <button class="btn _paper ">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
