@@ -1,0 +1,15 @@
+.footer-menu {
+    &__list {
+        display: grid;
+        grid-gap: 20px;
+        @include media-breakpoint-up(md) {
+            grid-auto-flow: column;
+            width: fit-content;
+        }
+    }
+
+    &__link {
+        font-size: var(--f-s-body-second);
+        color: var(--c-white);
+    }
+}

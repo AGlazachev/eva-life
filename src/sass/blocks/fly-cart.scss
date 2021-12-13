@@ -67,6 +67,12 @@
         width: 100%;
     }
 
+    .b-counter {
+        &__inner {
+            grid-gap: 0;
+        }
+    }
+
     &__amount {
         display: flex;
         justify-content: space-between;

@@ -1,0 +1,32 @@
+{% set footerMenu =[
+    {
+        name: 'Пользовательское соглашение',
+        link: '#',
+    },
+    {
+        name: 'Политика конфиденциальности',
+        link: '#',
+    },
+    {
+        name: 'FAQ',
+        link: '/faq.html',
+    },
+    {
+        name: 'Контакты',
+        link: '/contacts.html',
+    },
+    {
+        name: 'О нас',
+        link: '#',
+    },
+] %}
+
+<section class="footer-menu">
+    <ul class="footer-menu__list">
+        {% for item in footerMenu %}
+            <li class="footer-menu__item">
+                <a href="{{ item.link }}" class="footer-menu__link link">{{ item.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</section>
