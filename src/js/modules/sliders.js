@@ -1,3 +1,5 @@
+import simpleLightBox from 'simple-lightbox';
+
 document.addEventListener('DOMContentLoaded', () => {
     if(typeof Swiper !== 'undefined') {
         let swiper = new Swiper(".js-slider-thumbs", {
@@ -19,4 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
         });
     }
+
+
+    $('.card-slider__slide-main-link').simpleLightbox();
 });

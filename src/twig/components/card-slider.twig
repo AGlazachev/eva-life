@@ -28,7 +28,7 @@
         <div class="swiper-wrapper">
             {% for item in sliderItems %}
                 <div class="swiper-slide">
-                    <img src="{{ item.img }}"/>
+                    <img alt="" src="{{ item.img }}"/>
                 </div>
             {% endfor %}
         </div>
@@ -37,7 +37,9 @@
         <div class="swiper-wrapper">
             {% for item in sliderItems %}
                 <div class="swiper-slide">
-                    <img src="{{ item.img }}"/>
+                    <a class="card-slider__slide-main-link" href="{{ item.img }}">
+                        <img alt="" src="{{ item.img }}"/>
+                    </a>
                 </div>
             {% endfor %}
         </div>

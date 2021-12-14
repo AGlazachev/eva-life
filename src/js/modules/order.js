@@ -12,51 +12,57 @@ document.addEventListener("DOMContentLoaded", function () {
         goThirdStep = document.querySelector('.js-go-third-step'),
         allSteps = document.querySelectorAll('.js-order-steps');
 
-    function disableBtnActive() {
+    if (firstStep) {
+        function disableBtnActive() {
+            btnOrder.forEach(item => {
+                item.classList.remove('_active');
+            });
+        }
+
         btnOrder.forEach(item => {
-            item.classList.remove('_active');
+            item.addEventListener('click', () => {
+                disableBtnActive();
+                item.classList.add('_active');
+            });
         });
-    }
-    btnOrder.forEach(item => {
-        item.addEventListener('click', ()=>{
-            disableBtnActive();
-            item.classList.add('_active');
-        });
-    });
 
-    function disableAllSteps() {
-        allSteps.forEach(item => {
-            item.classList.add('hidden');
-        });
-        allPath.forEach(item => {
-            item.classList.remove('_active');
-        });
-    }
-    function changeToFirstStep() {
-        disableAllSteps();
-        firstStep.classList.remove('hidden');
-        firstPath.classList.add('_active');
-    }
-    function changeToSecondStep() {
-        disableAllSteps();
-        secondStep.classList.remove('hidden');
-        secondPath.classList.add('_active');
-    }
-    function changeToThirdStep() {
-        disableAllSteps();
-        thirdStep.classList.remove('hidden');
-        thirdPath.classList.add('_active');
-    }
+        function disableAllSteps() {
+            allSteps.forEach(item => {
+                item.classList.add('hidden');
+            });
+            allPath.forEach(item => {
+                item.classList.remove('_active');
+            });
+        }
 
-    goFirstStep.addEventListener('click', ()=> {
-        changeToFirstStep();
-    });
-    goSecondStep.forEach(item => {
-        item.addEventListener('click', ()=>{
-            changeToSecondStep();
+        function changeToFirstStep() {
+            disableAllSteps();
+            firstStep.classList.remove('hidden');
+            firstPath.classList.add('_active');
+        }
+
+        function changeToSecondStep() {
+            disableAllSteps();
+            secondStep.classList.remove('hidden');
+            secondPath.classList.add('_active');
+        }
+
+        function changeToThirdStep() {
+            disableAllSteps();
+            thirdStep.classList.remove('hidden');
+            thirdPath.classList.add('_active');
+        }
+
+        goFirstStep.addEventListener('click', () => {
+            changeToFirstStep();
         });
-    });
-    goThirdStep.addEventListener('click', ()=> {
-        changeToThirdStep();
-    });
+        goSecondStep.forEach(item => {
+            item.addEventListener('click', () => {
+                changeToSecondStep();
+            });
+        });
+        goThirdStep.addEventListener('click', () => {
+            changeToThirdStep();
+        });
+    }
 });
