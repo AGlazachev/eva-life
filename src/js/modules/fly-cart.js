@@ -19,4 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
     flyCartClose.addEventListener('click', () => {
         visibleFlyCart();
     })
+
+    overlay.addEventListener('click', () => {
+        visibleFlyCart();
+        overlay.classList.remove('_active');
+    })
 });
