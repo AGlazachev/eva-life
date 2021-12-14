@@ -51,6 +51,7 @@
         grid-gap: 8px;
         @include media-breakpoint-up(lg) {
             grid-gap: 16px;
+            align-items: center;
         }
     }
 
