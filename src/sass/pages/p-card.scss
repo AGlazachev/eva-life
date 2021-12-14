@@ -53,16 +53,22 @@
     &__size-list {
         display: grid;
         grid-template-columns: repeat(4, 60px);
+        align-items: center;
         grid-gap: 16px;
         @include media-breakpoint-up(lg) {
             grid-auto-flow: column;
-            grid-auto-columns: 80px;
+            grid-auto-columns: 60px;
             grid-template-columns: none;
         }
     }
 
     &__size-item {
-        max-width: 80px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
         padding: 4px 8px;
         border: var(--border);
         border-radius: var(--border-radius);
