@@ -13,7 +13,11 @@
         padding: 2vw 4vw 8vw;
     }
     &__close {
+        position: absolute;
+        right: 0;
+        top: 0;
         display: block;
+        padding: 20px;
         margin-left: auto;
     }
 
