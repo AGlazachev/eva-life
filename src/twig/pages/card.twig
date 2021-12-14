@@ -6,15 +6,22 @@
 {% block content %}
     <div class="section _with-women">
         <div class="container-xl p-card__container margin-default">
-            {% include '../components/card-slider.twig' %}
+            <div class="mobile-hidden">
+                {% include '../components/card-slider.twig' %}
+            </div>
             <div class="p-card__inner">
                 <h1 class="h2 p-card__title custom-title">Футболка</h1>
+                <div class="desktop-hidden">
+                    {% include '../components/card-slider.twig' %}
+                </div>
                 <span class="p-card__sku">Артикул: 00324</span>
                 <div class="b-price p-card__price-wrapper margin-small">
                     <span class="b-price__item _current">2000 руб.</span>
                     <span class="b-price__item _old">3000 руб.</span>
                     <button class="favorite _only-icon _active" type="button">
-                        <svg class="icon"><use xlink:href="#like"/></svg>
+                        <svg class="icon">
+                            <use xlink:href="#like"/>
+                        </svg>
                     </button>
                 </div>
                 <div class="p-card__wrapper margin-small">
@@ -24,8 +31,8 @@
                             <input class="radio__input" id="white" type="radio" name="color" checked>
                             <label class="radio__label link" for="white"></label>
                         </div>
-                        <div class="radio"  style="--radioColorBg: #fff" title="Чёрный">
-                            <input class="radio__input" id="black" type="radio" name="color" >
+                        <div class="radio" style="--radioColorBg: #fff" title="Чёрный">
+                            <input class="radio__input" id="black" type="radio" name="color">
                             <label class="radio__label link" for="black"></label>
                         </div>
                     </div>
@@ -37,6 +44,24 @@
                             <button class="b-counter__btn js-minus" type="button">+</button>
                         </div>
                     </div>
+                </div>
+                <div class="p-card__size-list margin-small">
+                    <button class="p-card__size-item _active" type="button">
+                        <span class="p-card__size-item-main">25</span>
+                        <span class="p-card__size-item-second">35-39</span>
+                    </button>
+                    <button class="p-card__size-item" type="button">
+                        <span class="p-card__size-item-main">25</span>
+                        <span class="p-card__size-item-second">35-39</span>
+                    </button>
+                    <button class="p-card__size-item" type="button">
+                        <span class="p-card__size-item-main">25</span>
+                        <span class="p-card__size-item-second">35-39</span>
+                    </button>
+                    <button class="p-card__size-item" type="button">
+                        <span class="p-card__size-item-main">25</span>
+                        <span class="p-card__size-item-second">35-39</span>
+                    </button>
                 </div>
                 <button class="btn _paper _middle">Добавить в корзину</button>
                 <div class="p-card__text">

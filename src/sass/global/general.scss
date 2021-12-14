@@ -7,6 +7,20 @@ html {
     display: none !important;
 }
 
+.mobile-hidden {
+    display: none !important;
+    @include media-breakpoint-up(lg) {
+        display: block !important;
+    }
+}
+
+.desktop-hidden {
+    display: block !important;
+    @include media-breakpoint-up(lg) {
+        display: none !important;
+    }
+}
+
 #svg-icons {
     display: none;
 }

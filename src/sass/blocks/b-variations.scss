@@ -5,7 +5,7 @@
     display: grid;
     grid-auto-flow: dense;
     grid-auto-rows: auto;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, auto);
     grid-gap: 0 16px;
     width: fit-content;
     &__text {
