@@ -47,6 +47,15 @@
         {% include '../components/socials.twig' %}
     </div>
     <div class="container-xl p-contacts__container-second">
+        <div class="accordion__item margin-default">
+            <div class="accordion__btn link">
+                <span class="accordion__btn-text">Дистрибьютор: ООО «Торговая Компания «Параллель»</span>
+                <p class="btn-plus"><span></span></p>
+            </div>
+            <div class="accordion__text">
+                {% include '../components/requisites.twig' %}
+            </div>
+        </div>
         <div>
             <div class="form-inner">
                 <p class="form-inner__form-title">Есть вопросы?</p>
@@ -73,6 +82,5 @@
                 </p>
             </div>
         </div>
-        {% include '../components/requisites.twig' %}
     </div>
 {% endblock %}
