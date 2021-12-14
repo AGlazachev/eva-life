@@ -66,21 +66,26 @@
         padding: 4px 8px;
         border: var(--border);
         border-radius: var(--border-radius);
+        cursor: pointer;
         transition: var(--transitions);
         &:hover, &._active {
             border-color: var(--c-primary);
             color: var(--c-primary);
+        }
+        
+        input {
+            display: none;
         }
     }
 
     &__size-item-main {
         display: block;
         text-align: center;
-    }
-
-    &__size-item-second {
-        display: block;
-        font-size: var(--f-s-small);
-        text-align: center;
+        cursor: pointer;
+        span {
+            display: block;
+            font-size: var(--f-s-small);
+            text-align: center;
+        }
     }
 }
