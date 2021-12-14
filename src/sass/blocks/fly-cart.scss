@@ -64,6 +64,9 @@
     }
 
     &__item-close {
+        display: block;
+        width: 100%;
+        text-align: right;
         font-size: var(--f-s-body-second);
     }
 
