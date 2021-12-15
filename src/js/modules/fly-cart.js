@@ -1,14 +1,12 @@
-import Inputmask from "inputmask";
-
 document.addEventListener('DOMContentLoaded', () => {
     let flyCartBtn = document.querySelector('.js-cart-btn'),
-        overlay = document.querySelector('.js-overlay'),
+        overlayCart = document.querySelector('.js-overlay-cart'),
         flyCartClose = document.querySelector('.js-close-fly-cart'),
         flyCart = document.querySelector('.fly-cart');
 
     function visibleFlyCart() {
         flyCart.classList.toggle('hidden');
-        overlay.classList.toggle('_active');
+        overlayCart.classList.toggle('_active');
         document.querySelector('.body').classList.toggle('_no-scroll');
     }
 
@@ -20,8 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         visibleFlyCart();
     })
 
-    overlay.addEventListener('click', () => {
+    overlayCart.addEventListener('click', () => {
         visibleFlyCart();
-        overlay.classList.remove('_active');
     })
 });
