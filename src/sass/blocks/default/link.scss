@@ -53,6 +53,10 @@
         }
     }
 
+    &._border {
+        border-bottom: 1px dashed var(--c-primary);
+    }
+
     &._active {
         opacity: var(--linkActiveOpacity);
         cursor: default;
