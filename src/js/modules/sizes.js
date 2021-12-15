@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', ()=> {
-    sizeArray = document.querySelectorAll('.js-size-item');
+    let sizeArray = document.querySelectorAll('.js-size-item');
 
     function hiddenAllSizes() {
         sizeArray.forEach(item => {
