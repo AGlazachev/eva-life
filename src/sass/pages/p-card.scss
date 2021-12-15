@@ -100,4 +100,9 @@
         margin-top: 12px;
         font-size: var(--f-s-small);
     }
+
+    &__size-sub-text {
+        font-size: var(--f-s-small);
+        color: var(--c-text-second);
+    }
 }

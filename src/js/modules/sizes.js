@@ -13,4 +13,13 @@ document.addEventListener('DOMContentLoaded', ()=> {
             item.classList.add('_active')
         });
     });
+
+    function animationSizes() {
+        sizeArray.forEach(item => {
+            item.classList.add('_active');
+            setTimeout(() => {
+                item.classList.remove('_active');
+            }, 800)
+        });
+    }
 })
