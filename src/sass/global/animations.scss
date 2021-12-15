@@ -31,3 +31,13 @@
         transform: rotate(var(--r, 0));
     }
 }
+
+@keyframes addToCart {
+    from {
+        right: -100%;
+    }
+
+    to {
+        right: 28px;
+    }
+}

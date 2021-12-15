@@ -1,0 +1,23 @@
+.add-cart-modal {
+    display: none;
+
+    &._active {
+        position: fixed;
+        z-index: 200;
+        top: 40px;
+        right: 28px;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-gap: 28px;
+        align-items: center;
+        padding: 20px 40px;
+        background-color: var(--c-white);
+        box-shadow: 0 -29px 60px rgba(0, 0, 0, 0.1);
+        animation: addToCart 0.8s ease;
+    }
+
+    .icon {
+        width: 32px;
+        height: 32px;
+    }
+}
