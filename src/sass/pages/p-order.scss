@@ -100,17 +100,15 @@
 
     &__delivery-list-inner {
         min-width: 600px;
-        padding: 16px 0 0;
         border: var(--border);
         border-width: 2px;
         overflow: hidden;
     }
 
     &__delivery-item {
-        padding: 0 36px 20px 20px;
+        padding: 20px 36px 20px 20px;
         &:not(:last-child) {
             border-bottom: var(--border);
-            margin-bottom: 20px;
         }
     }
 
