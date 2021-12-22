@@ -1,0 +1,39 @@
+{% set sliderItems = [
+    {
+        img: '/assets/img/catalog/card-1.png',
+    },
+    {
+        img: '/assets/img/catalog/card-1.png',
+    },
+    {
+        img: '/assets/img/catalog/card-1.png',
+    },
+    {
+        img: '/assets/img/catalog/card-1.png',
+    },
+    {
+        img: '/assets/img/catalog/card-1.png',
+    },
+    {
+        img: '/assets/img/catalog/card-1.png',
+    },
+    {
+        img: '/assets/img/catalog/card-1.png',
+    },
+] %}
+
+
+<div class="card-slider _mobile margin-default">
+    <div class="swiper card-slider__slide-main js-slider-main-mobile">
+        <div class="swiper-wrapper">
+            {% for item in sliderItems %}
+                <div class="swiper-slide">
+                    <a class="card-slider__slide-main-link" href="{{ item.img }}">
+                        <img alt="" src="{{ item.img }}"/>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>

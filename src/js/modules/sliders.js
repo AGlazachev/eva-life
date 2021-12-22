@@ -25,6 +25,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 swiper: swiper,
             },
         });
+        let swiper3 = new Swiper(".js-slider-main-mobile", {
+            loop: true,
+            spaceBetween: 10,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                dynamicBullets: true,
+            },
+        });
     }
 
 
