@@ -1,9 +1,15 @@
 .age-control {
+    top: 50%;
+    left: 50%;
     display: grid;
     place-items: center;
+    height: auto;
     padding: 0 32px !important;
+    transform: translate(-50%, -50%);
+    border-radius: 0;
     @include media-breakpoint-up(sm) {
         display: block;
+        border-radius: var(--modalBorderRadius);
     }
 
     &__inner {
@@ -27,6 +33,7 @@
         grid-gap: 20px;
         align-items: center;
         padding-bottom: 40px;
+        padding-top: 28px;
     }
 
     &__img {
