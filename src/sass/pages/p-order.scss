@@ -151,6 +151,23 @@
         &__body {
             padding-left: 0;
             padding-right: 0;
+            padding-bottom: 20px;
+        }
+
+        &__row {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 12px;
+            align-items: flex-start;
+            @include media-breakpoint-up(lg) {
+                grid-template-columns: 212px repeat(5, auto);
+                grid-gap: 20px;
+                align-items: center;
+            }
+        }
+
+        &__img {
+            width: fit-content;
         }
     }
 }

@@ -47,6 +47,10 @@
 
     &._textarea {
         height: auto;
-        min-height: 120px;
+        min-height: 80px;
+
+        textarea {
+            height: 100%;
+        }
     }
 }

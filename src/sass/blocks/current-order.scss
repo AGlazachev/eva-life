@@ -2,7 +2,6 @@
     overflow: auto;
 
     &__inner {
-        min-width: 900px;
         border: var(--border);
         &._no-border {
             border: none;
@@ -16,6 +15,9 @@
         align-items: center;
         padding: 20px 28px;
         border-bottom: var(--border);
+        @include media-breakpoint-up(lg) {
+            padding: 20px 36px 20px 20px;
+        }
     }
 
     &__header-desc {
