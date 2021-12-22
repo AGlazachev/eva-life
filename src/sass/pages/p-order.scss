@@ -94,9 +94,12 @@
 
     &__delivery-item {
         display: grid;
-        grid-template-columns: 130px repeat(3, 1fr);
         align-items: center;
-        grid-gap: 28px;
+        grid-gap: 8px;
+        @include media-breakpoint-up(md) {
+            grid-template-columns: 130px repeat(3, 1fr);
+            grid-gap: 28px;
+        }
     }
 
     &__delivery-list {
@@ -104,14 +107,19 @@
     }
 
     &__delivery-list-inner {
-        min-width: 600px;
         border: var(--border);
         border-width: 2px;
-        overflow: hidden;
+        @include media-breakpoint-up(md) {
+            min-width: 600px;
+            overflow: hidden;
+        }
     }
 
     &__delivery-item {
-        padding: 20px 36px 20px 20px;
+        padding: 20px;
+        @include media-breakpoint-up(md) {
+            padding: 20px 36px 20px 20px;
+        }
         &:not(:last-child) {
             border-bottom: var(--border);
         }
