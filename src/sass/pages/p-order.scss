@@ -5,10 +5,13 @@
 
     &__path-list {
         display: grid;
-        grid-auto-flow: column;
-        width: fit-content;
-        min-width: 560px;
+
         overflow: hidden;
+        @include media-breakpoint-up(md) {
+            grid-auto-flow: column;
+            width: fit-content;
+            min-width: 560px;
+        }
     }
 
     &__path-item {
@@ -19,16 +22,18 @@
             margin-right: 20px;
         }
 
-        &::before {
-            content: '>';
-            position: absolute;
-            top: -1px;
-            right: -4px;
-            color: var(--c-text);
-        }
+        @include media-breakpoint-up(md) {
+            &::before {
+                content: '>';
+                position: absolute;
+                top: -1px;
+                right: -4px;
+                color: var(--c-text);
+            }
 
-        &:last-child::before {
-            display: none;
+            &:last-child::before {
+                display: none;
+            }
         }
 
         &._active {
