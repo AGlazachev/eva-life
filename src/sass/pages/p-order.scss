@@ -100,6 +100,11 @@
             grid-template-columns: 130px repeat(3, 1fr);
             grid-gap: 28px;
         }
+
+        &._active {
+            color: var(--c-white);
+            background-color: var(--c-black);
+        }
     }
 
     &__delivery-list {
