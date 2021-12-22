@@ -7,6 +7,7 @@ let mobileMenuBtn = document.querySelector('.js-mobile-btn'),
 function mobileMenuClose() {
     mobileMenu.classList.add('hidden');
     mobileMenuBtn.classList.remove('active');
+    header.classList.remove('_menuActive');
     overlay.classList.remove('_active');
     document.body.classList.remove('_no-scroll');
 }
