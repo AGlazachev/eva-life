@@ -167,7 +167,6 @@
             @include media-breakpoint-up(lg) {
                 grid-template-columns: 212px repeat(5, auto);
                 grid-gap: 20px;
-                align-items: center;
             }
         }
 
