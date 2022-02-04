@@ -7,7 +7,8 @@
     line-height: 1.5;
     color: var(--c-text);
     &._bg {
-        background: linear-gradient(180deg, #A7FAFF 0%, #F77CAD 76.25%), linear-gradient(180deg, #FFF6A7 0%, #F77CAD 76.25%);
+        background: url('/assets/img/custom/cover-bg.jpg'), linear-gradient(180deg, #A7FAFF 0%, #F77CAD 76.25%), linear-gradient(180deg, #FFF6A7 0%, #F77CAD 76.25%);
+        background-size: cover;
     }
 
     &._fixed {
