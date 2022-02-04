@@ -165,8 +165,8 @@
             grid-gap: 12px;
             align-items: flex-start;
             @include media-breakpoint-up(lg) {
-                grid-template-columns: 212px repeat(5, auto);
-                grid-gap: 20px;
+                grid-template-columns: 120px 1fr 0.7fr 0.5fr 0.8fr;
+                grid-gap: 24px;
             }
         }
 
