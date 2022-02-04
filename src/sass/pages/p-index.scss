@@ -3,11 +3,18 @@
         display: grid;
         align-items: center;
         height: fit-content;
-        min-height: calc(100vh - var(--mobileHeaderHeight));
+        min-height: calc(80vh - var(--mobileHeaderHeight));
         @include media-breakpoint-up(lg) {
             grid-template-columns: 1fr 1fr;
-            height: 100%;
-            min-height: auto;
+            height: 80vh;
+        }
+    }
+
+    &__catalog {
+        padding: 60px 0;
+        background-color: var(--c-white);
+        @include media-breakpoint-up(lg) {
+            padding: 80px 0;
         }
     }
 

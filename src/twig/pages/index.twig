@@ -1,31 +1,93 @@
 {% extends '../layouts/base.twig' %}
 
 {% block title %}Главная{% endblock %}
-{% block bodyClass %}_bg _fixed{% endblock %}
+{% block bodyClass %}_bg{% endblock %}
 {% block mainClass %}p-index{% endblock %}
+{% set cardItems = [
+    {
+        name: 'Футболка белая',
+        desc: 'Футболка название и какой логотип',
+        img: '/assets/img/catalog/item-1.png',
+        link: '#',
+        price: '2 000',
+        priceOld: '3 000'
+    },
+    {
+        name: 'Свитшот',
+        desc: 'Футболка название и какой логотип Футболка название и какой логотип',
+        img: '/assets/img/catalog/item-2.png',
+        link: '#',
+        price: '2 000',
+        priceOld: '3 000'
+    },
+    {
+        name: 'Худи тестирование очень длинного названия',
+        desc: 'Футболка название и какой логотип',
+        img: '/assets/img/catalog/item-3.png',
+        link: '#',
+        price: '2 000',
+        priceOld: '3 000'
+    },
+    {
+        name: 'Футболка белая',
+        desc: 'Футболка название и какой логотип',
+        img: '/assets/img/catalog/item-4.png',
+        link: '#',
+        price: '2 000',
+    },
+    {
+        name: 'Худи тестирование очень длинного названия',
+        desc: 'Футболка название и какой логотип Футболка название и какой логотип Футболка название и какой логотип',
+        img: '/assets/img/catalog/item-5.png',
+        link: '#',
+        price: '2 000',
+        priceOld: '3 000'
+    },
+    {
+        name: 'Футболка белая',
+        desc: 'Футболка название и какой логотип',
+        img: '/assets/img/catalog/item-6.png',
+        link: '#',
+        price: '2 000',
+        priceOld: '3 000'
+    },
+    {
+        name: 'Футболка белая',
+        desc: 'Футболка название и какой логотип',
+        img: '/assets/img/catalog/item-1.png',
+        link: '#',
+        price: '2 000',
+        priceOld: '3 000'
+    },
+    {
+        name: 'Футболка белая',
+        desc: 'Футболка название и какой логотип',
+        img: '/assets/img/catalog/item-2.png',
+        link: '#',
+        price: '2 000',
+    },
+] %}
+
 
 {% block content %}
-    <div class="container-xl p-index__container">
-        <div class="p-index__inner">
-            <h1 class="h1 margin-big custom-title">Eva Elfie</h1>
-            {% include '../components/socials.twig' %}
-            <div class="p-index__btn-inner">
-                <a href="/catalog.html" class="btn _paper _big _with-icon">
-                    <svg class="icon">
-                        <use xlink:href="#dress"></use>
-                    </svg>
-                    <span>Мерч</span>
-                </a>
-                <a href="/catalog.html" class="btn _paper _big _with-icon">
-                    <svg class="icon">
-                        <use xlink:href="#bubble"></use>
-                    </svg>
-                    <span>Комикс</span>
-                </a>
+    <div class="p-index__promo">
+        <div class="p-index__container container-xl">
+            <div class="p-index__inner">
+                <h1 class="h1 margin-big custom-title">Eva Elfie</h1>
+                {% include '../components/socials.twig' %}
+            </div>
+            <div class="p-index__wrapper">
+                <img class="p-index__img" src="/assets/img/custom/main-girl.png" alt="">
             </div>
         </div>
-        <div class="p-index__wrapper">
-            <img class="p-index__img" src="/assets/img/custom/main-girl.png" alt="">
+    </div>
+    <div class="p-index__catalog">
+        <div class="container-xl p-catalog__container">
+            <div class="p-catalog__items">
+                {% for item in cardItems %}
+                    {% include '../components/card-item.twig' %}
+                {% endfor %}
+            </div>
         </div>
     </div>
 {% endblock %}

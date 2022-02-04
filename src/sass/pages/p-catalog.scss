@@ -7,6 +7,7 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: 24px;
+        background-color: var(--c-white);
         @include media-breakpoint-up(sm) {
             grid-template-columns: repeat(2, 1fr);
         }
