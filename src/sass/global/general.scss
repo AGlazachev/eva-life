@@ -24,3 +24,14 @@ html {
 #svg-icons {
     display: none;
 }
+
+.slbImage {
+    padding: 1em 0 !important;
+}
+
+.slbCloseBtn {
+
+    @include media-breakpoint-up(lg) {
+        right: -1rem !important;
+    }
+}
