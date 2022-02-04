@@ -11,6 +11,10 @@
         background-size: cover;
     }
 
+    &._bg-light {
+        background: linear-gradient(180deg, rgba(227, 244, 245, 0.8) 16.15%, rgba(254, 170, 204, 0.8) 88.02%);
+    }
+
     &._fixed {
         @include media-breakpoint-up(lg) {
             height: 100vh;

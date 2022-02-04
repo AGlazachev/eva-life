@@ -18,3 +18,26 @@ import sizes from './modules/sizes';
 import modal from './modules/modal';
 
 require('./scripts');
+
+document.addEventListener('DOMContentLoaded', ()=> {
+    let themeSwitchers = document.querySelectorAll('.themes-switcher__btn');
+
+    themeSwitchers.forEach(item => {
+        item.addEventListener('click', ()=> {
+            switch(item.getAttribute('data-type')) {
+                case 'theme-white':
+                    document.body.classList.remove('_bg');
+                    document.body.classList.remove('_bg-light');
+                    break;
+                case 'theme-grad':
+                    document.body.classList.add('_bg');
+                    document.body.classList.remove('_bg-light');
+                    break;
+                case 'theme-grad-light':
+                    document.body.classList.add('_bg-light');
+                    document.body.classList.remove('_bg');
+                    break;
+            }
+        })
+    })
+})
