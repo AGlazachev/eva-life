@@ -1,4 +1,8 @@
 .p-index {
+    &__promo {
+        overflow: hidden;
+    }
+
     &__container {
         display: grid;
         align-items: center;
